@@ -1,0 +1,43 @@
+%!Adobe-FontList 1.14
+%Locale:0x240a
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\xampp\htdocs\feriadelasflores\wp-content\themes\feria\Font\coolvetica_rg-webfont.eot
+FileModTime:1372541534
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\xampp\htdocs\feriadelasflores\wp-content\themes\feria\Font\coolvetica_rg-webfont.svg
+FileModTime:1372541534
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:CoolveticaRg-Regular
+FamilyName:Coolvetica
+StyleName:Regular
+FullName:Coolvetica Rg Regular
+MenuName:Coolvetica Rg
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\xampp\htdocs\feriadelasflores\wp-content\themes\feria\Font\coolvetica_rg-webfont.ttf
+DataFormat:sfntData
+FileLength:42440
+FileModTime:1372541534
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\xampp\htdocs\feriadelasflores\wp-content\themes\feria\Font\coolvetica_rg-webfont.woff
+FileModTime:1372541534
+%EndFont
+

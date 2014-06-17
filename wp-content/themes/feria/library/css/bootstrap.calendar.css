@@ -1,0 +1,159 @@
+/*
+ *
+ * bootstrap-calendar plugin
+ * Original author: @ahmontero
+ * Licensed under the MIT license
+ *
+ */
+
+.calendar body {
+     background-color: #FFFFFF;
+     position: relative;
+}
+
+.calendario h2 {
+	line-height:24px;
+	margin:0;
+	padding:0;}
+
+.calendar span {
+	display:block;
+	float:left;}
+
+.year {
+     color: rgba(0, 0, 0, 0.3);
+     font-size: 0.4em;
+     padding: 10px 10px 5px 10px;
+	 background-color:#EBEBEB;
+	 color:#999;
+	 margin:0;
+	 webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+}
+
+.month {
+     color: rgba(0, 0, 0, 0.3);
+     font-size: 0.5em;
+        padding: 10px 10px 5px 10px;
+	  background-color:#FF5170;
+	  color:#FFF;
+	  text-transform:uppercase;
+	  margin:0;
+	  webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+}
+
+.calendar {
+     table-layout:fixed;
+	 background-color:#FFF;
+
+}
+
+.calendar TH {
+     width: 50px;
+     height: 30px;
+
+     font-size: 16px;
+     font-weight: bold;
+     color: rgba(0, 0, 0, 0.3);
+     text-align: center;
+
+     -moz-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+     -moz-transition: background 0.2s linear 0s;
+     border: 1px solid #EFEFEF;
+   
+}
+
+.calendar TD, TD.day{
+     height: 40px;
+     width: 40px;
+
+     font-size: 16px;
+     font-weight: bold;
+     color: rgba(0, 0, 0, 0.3);
+     text-align: center;
+
+     -moz-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+     -moz-transition: background 0.2s linear 0s;
+
+     border: 1px solid #EFEFEF;
+ 
+}
+
+.calendar TD.day:hover{
+     
+     background-color:#FF5170;
+     outline: 0 none;
+     cursor: pointer;
+     color: #FFFFFF;
+}
+
+.calendar TD.weekend {
+     color: rgba(0, 0, 0, 0.3);
+}
+
+.calendar TD.today {
+   
+     color:#FFF;
+	 background-color:#09F;
+
+}
+
+.calendar TD.today:hover{
+
+     background:#0069D2;
+     outline: 0 none;
+     cursor: pointer;
+     color: #FFFFFF;
+}
+
+.calendar TD.holiday {
+     color: red;
+}
+
+.calendar TD.holiday:hover {
+     cursor: pointer;
+}
+
+.calendar TD SPAN.weekday{
+     background-color: rgba(0, 0, 0, 0.1);
+     border-radius: 14%;
+     color: #FFFFFF;
+     font-size: 32px;
+     font-weight: bold;
+     padding: 2px 4px 2px;
+     white-space: nowrap;
+}
+
+.calendar TD SPAN.weekday:hover{
+     background-color: rgba(0, 0, 0, 0.25);
+}
+
+.calendar TFOOT, .calendar TFOOT TR TH.sel {
+     height: 15px;
+     width: 50px;
+
+     font-size: 28px;
+     font-weight: bold;
+     color: rgba(0, 0, 0, 0.3);
+     text-align: center;
+     border: 1px solid #EFEFEF;
+	 
+	 background-color:#FFF;
+
+     cursor:pointer;
+}
+
+.calendar TFOOT TR TH.sel:hover {
+     background-color:#09F;
+     outline: 0 none;
+     cursor: pointer;
+     color: #FFFFFF;
+}
+
+.calendar .arrow{
+     padding:10px 0px 0px 0px;
+}
+
