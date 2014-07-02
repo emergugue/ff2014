@@ -631,7 +631,7 @@ if( !function_exists( "theme_js" ) ) {
     wp_register_script( 'wpbs-scripts', 
       get_template_directory_uri() . '/library/js/scripts.js', 
       array('jquery'), 
-      '1.2' );
+      '1.2', true );
   
     wp_register_script(  'modernizr', 
       get_template_directory_uri() . '/library/js/modernizr.full.min.js', 
@@ -810,5 +810,30 @@ function get_wpbs_theme_options(){
         }
       }
 } // end get_wpbs_theme_options function
+
+//disponible desde 2014
+function uploadAjaxResponse()
+{
+  echo 'sizas';
+  die;
+  include('../plugins/avatar-fiesta/classes/server/php/index.php');
+  die;
+}
+
+add_action('wp_ajax_nopriv_uploadAjax', 'uploadAjaxResponse');
+add_action('wp_ajax_uploadAjax', 'uploadAjaxResponse');
+
+
+// Añadimos la acción para crear widgets desde el template
+
+function creaWidgets()
+{
+ register_widget( 'WidgetHome' );
+}
+
+add_action( 'widgets_init', 'creaWidgets' );
+
+include_once(TEMPLATEPATH.'/widgets/widget-home.php');
+
 
 ?>

@@ -99,5 +99,50 @@ jQuery(document).ready(function($) {
 	$('.alert-message').alert();
 	
 	$('.dropdown-toggle').dropdown();
+
+
+	/* Funciones para 2014 */
+  if( $('#avatar').length )
+  {
+  	var wAvatar = $('#avatar').width();
+  	var hAvatar = $('#avatar').height();
+  	
+  	$('.crop_me').jWindowCrop({
+  		targetWidth: wAvatar,
+  		targetHeight: hAvatar,
+		//loadingText: 'hello world',
+		onChange: function(result) {
+			$('#crop_x').text(result.cropX);
+			$('#crop_y').text(result.cropY);
+			$('#crop_w').text(result.cropW);
+			$('#crop_h').text(result.cropH);
+		} 
+	});
+  }
+
+  if( $('#avatar').length )
+  {
+  	'use strict';
+    var url = window.location.hostname === 'blueimp.github.io' ?
+    '//jquery-file-upload.appspot.com/' : '/ff2014/wp-content/plugins/avatar-fiesta/server/php/';
+    $('#fileupload').fileupload({
+    	url: url,
+    	dataType: 'json',
+    	done: function (e, data) {
+    		$.each(data.result.files, function (index, file) {
+    			$('<p/>').text(file.name).appendTo('#files');
+    		});
+    	},
+    	progressall: function (e, data) {
+    		var progress = parseInt(data.loaded / data.total * 100, 10);
+    		$('.bar').css(
+    			'width',
+    			progress + '%'
+    			);
+    	}
+    }).prop('disabled', !$.support.fileInput)
+    .parent().addClass($.support.fileInput ? undefined : 'disabled');
+}
+
  
 }); /* end of as page load scripts */

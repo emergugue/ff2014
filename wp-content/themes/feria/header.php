@@ -37,13 +37,13 @@
 		<!-- typeahead plugin - if top nav search bar enabled -->
 		<?php require_once('library/typeahead.php'); ?>
         
-      <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/js/libs/jquery-1.7.1.min.js" ></script>
+      <!--<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/js/libs/jquery-1.7.1.min.js" ></script>-->
       <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/js/bootstrap.calendar.js" ></script>
 
       <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/css/bootstrap.calendar.css" type="text/css" />
   <script src="<?php bloginfo('template_directory'); ?>/jquery.isotope.min.js"></script>
   <script>
-  $(function(){
+  jQuery(function($){
     
     var $container = $('#container');
     
@@ -95,7 +95,7 @@
   </script>  
       
 	  <script type="text/javascript">
-        $(document).ready(function(){
+        jQuery(document).ready(function($){
 
           var evnts = function(){
               return {
