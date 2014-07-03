@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: cheesefather
 Donate link: https://www.paypal.com/xclick/business=support@pelinor.com&item_name=BAB Donation&currency_code=GBP
-Tags: admin, attack, blocker, botnet, brute-force, ddos, distributed, global, ip, lockout, lockdown, login, plugin, security, wp-admin, admin
-Requires at least: 2.8.0
-Tested up to: 3.5.1
-Stable tag: 1.7
+Tags: admin, attack, blocker, botnet, brute-force, ddos, distributed, global, ip, lockout, lockdown, login, plugin, security, wp-admin, admin, multisite
+Requires at least: 3.0.0
+Tested up to: 3.7.1
+Stable tag: 1.9.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,7 @@ You can select how many login failures causes the lockout, how much time to allo
 * You can specify how long the lockdown should last
 * You can add whitelisted IP addresses that bypass the lockdown
 * Partial IP address matching for dynamically-allocated IP addresses
+* Multisite compatible
 * Now available in French, German, Italian and Russian
 
 == Installation ==
@@ -54,6 +55,16 @@ Yes, just type in the IP part to match, e.g. 1.2 or 1.2.3 and leave out the part
 1. Simple admin screen to change plugin options.
 
 == Changelog ==
+
+= 1.9.1 =
+* Bugfix for whitelist errors
+
+= 1.9 =
+* Improve table deletion on deactivation
+
+= 1.8 =
+* Multisite compatible for individual or network activation
+* Add 24 hour blocking option
 
 = 1.7 =
 * Remove options and plugin table on deactivation

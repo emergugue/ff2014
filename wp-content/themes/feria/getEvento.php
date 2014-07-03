@@ -44,15 +44,23 @@ foreach ($jornadas as $j) {
 }
 ?>
   <?php if($fechaSeleccionada >= $fechaInicio AND $fechaSeleccionada <= $fechaFin): ?>  
+
+  <?php
+      $evento_class = '';
+      $posttags = get_the_tags();
+      if ($posttags) {
+           foreach($posttags as $tag) {
+                $evento_class .= strtolower($tag->name).' '; 
+      }
+ } ?>
   <a href="<?php the_permalink(); ?>">
-  <div class="element <?php echo $class ?>">
-  
-          <h2><?php the_title(); ?></h2>  
-          <ul>
-	          <li><i class="icon-time"></i> <strong> Hora:</strong> <?php echo $humanHoraInicio ?> <?php echo ($tieneHoraFin) ? " a $humanHoraFin" : "" ?></li>
-              <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> <?php echo $lugar ?></li>
-              <li><i class="icon-star"></i> <strong>Teléfono:</strong> <?php echo $telefono ?></li>
-          </ul>
+  <div class="element <?php echo $class.' '.$evento_class ?>">
+    <h2><?php the_title(); ?></h2>  
+    <ul>
+      <i class="icon-time"></i> <strong> Hora:</strong> <?php echo $humanHoraInicio ?> <?php echo ($tieneHoraFin) ? " a $humanHoraFin" : "" ?></li>
+      <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> <?php echo $lugar ?></li>
+      <li><i class="icon-star"></i> <strong>Teléfono:</strong> <?php echo $telefono ?></li>
+    </ul>
   </div>
   </a>
   <?php endif; ?>

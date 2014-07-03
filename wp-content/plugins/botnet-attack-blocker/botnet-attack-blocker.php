@@ -3,17 +3,34 @@
 Plugin Name: Botnet Attack Blocker
 Plugin URI: http://cheesefather.com/2013/04/wordpress-distributed-botnet-attack-blocker/
 Description: Temporarily block all admin logins after multiple failed attempts - helps to prevent brute force botnet attacks from multiple IP addresses.
-Version: 1.7
+Version: 1.9.1
 Author: Misha von Bennigsen
 Author URI: http://www.mish.tv
 License: GPL2
 */
 
 # globals
-global $bab_db_version;
 $bab_db_version = '1.0';
+global $bab_db_version;
 
 # create table and set options on plugin install
+function bab_activate($network_wide) {
+global $wpdb;
+global $bab_db_version;
+	if (function_exists('is_multisite') && is_multisite()) {
+		if ($network_wide) {
+		$blogs = $wpdb->get_results("SELECT blog_id FROM {$wpdb->blogs} WHERE site_id = '{$wpdb->siteid}' AND spam = '0' AND deleted = '0' AND archived = '0'");
+		$original_blog_id = get_current_blog_id();   
+			foreach ($blogs as $blog_id) {
+			switch_to_blog($blog_id->blog_id);
+			bab_install();
+			} //foreach
+		switch_to_blog($original_blog_id);
+		} //if network
+		else bab_install();
+	} //if multisite
+	else bab_install();
+} //function
 function bab_install() {
 global $wpdb;
 global $bab_db_version;
@@ -21,29 +38,59 @@ $table_name = $wpdb->prefix . 'botnetblocker';
 $sql = "CREATE TABLE IF NOT EXISTS `".$table_name."` (`id` int(6) NOT NULL auto_increment,`ip_address` varchar(15) NOT NULL,`timestamp` varchar(10) NOT NULL,PRIMARY KEY (`id`)) ENGINE=MyISAM DEFAULT CHARSET=latin1 COMMENT='Botnet Attack Blocker database' AUTO_INCREMENT=1";
 require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 dbDelta($sql);
-add_option("bab_db_version", $bab_db_version);
 $bab_options = array(
 'table_name' => $table_name,
 'num_fails' => 5, //maximum value is 127
 'grace_period_secs' => 300, //300 seconds is 5 minutes
 'block_period_secs' => 3600, //3600 seconds is 60 minutes
 'whitelist_ip' => '');
-add_option("bab_options", $bab_options);
+	if (is_plugin_active_for_network('botnet-attack-blocker/botnet-attack-blocker.php')) {
+	add_site_option("bab_options", $bab_options);
+	add_site_option("bab_db_version", $bab_db_version);
+	} //if
+	else {
+	add_option("bab_options", $bab_options);
+	add_option("bab_db_version", $bab_db_version);
+	} //else
 } //function
-register_activation_hook(__FILE__, 'bab_install');
+register_activation_hook(__FILE__, 'bab_activate');
 
 # delete table and options on plugin deactivate
+function bab_deactivate($network_wide) {
+global $wpdb;
+global $bab_db_version;
+	if (function_exists('is_multisite') && is_multisite()) {
+		if ($network_wide) {
+		$blogs = $wpdb->get_results("SELECT blog_id FROM {$wpdb->blogs} WHERE site_id = '{$wpdb->siteid}' AND spam = '0' AND deleted = '0' AND archived = '0'");
+		$original_blog_id = get_current_blog_id();   
+			foreach ($blogs as $blog_id) {
+			switch_to_blog($blog_id->blog_id);
+			bab_uninstall();
+			} //foreach
+		switch_to_blog($original_blog_id);
+		} //if network
+		else bab_uninstall();
+	} //if multisite
+	else bab_uninstall();
+} //function
 function bab_uninstall() {
 global $wpdb;
 global $bab_db_version;
-delete_option("bab_db_version");
-delete_option("bab_options");
+	if (is_plugin_active_for_network('botnet-attack-blocker/botnet-attack-blocker.php')) {
+	delete_site_option("bab_db_version");
+	delete_site_option("bab_options");
+	} //if
+	else {
+	delete_option("bab_db_version");
+	delete_option("bab_options");
+	} //else
 $table_name = $wpdb->prefix . 'botnetblocker';
-$sql = "DROP TABLE `".$table_name."`";
-require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-dbDelta($sql);
+$wpdb->query("DROP TABLE IF EXISTS ".$table_name);
+#$sql = "DROP TABLE `".$table_name."`";
+#require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+#dbDelta($sql);
 } //function
-register_deactivation_hook(__FILE__, 'bab_uninstall');
+register_deactivation_hook(__FILE__, 'bab_deactivate');
 
 # add credit to login page - removed as per Wordpress guidelines
 /*
@@ -62,15 +109,19 @@ add_action('plugins_loaded', 'bab_init');
 # hook into login page and block if logged requisite number of fails and still within block_period_secs
 function bab_login_init() {
 global $wpdb;
-$bab_options = get_option("bab_options");
+	if (!function_exists('is_plugin_active_for_network')) require_once(ABSPATH . '/wp-admin/includes/plugin.php');
+	if (is_plugin_active_for_network('botnet-attack-blocker/botnet-attack-blocker.php')) $bab_options = get_site_option("bab_options");
+	else $bab_options = get_option("bab_options");
 	if ($bab_options['whitelist_ip'] != '') {
 	$whitelist_string = str_replace(array(',', ' '), '-|-', $bab_options['whitelist_ip']);
 	$whitelist_array = explode('-|-', $whitelist_string);
 		foreach ($whitelist_array as $whitelist_ip) {
-			if (strpos($_SERVER['REMOTE_ADDR'], trim($whitelist_ip)) !== false) return; //exit if whitelisted
+			if (isset($whitelist_ip) && trim($whitelist_ip) != '') {
+				if (strpos($_SERVER['REMOTE_ADDR'], trim($whitelist_ip)) !== false) return; //exit if whitelisted
+			} //if ip exists
 		} //foreach
 	} //if whitelisted ips
-$fails = $wpdb->get_results("SELECT timestamp FROM ".$bab_options['table_name']." ORDER BY timestamp DESC");
+$fails = $wpdb->get_results("SELECT timestamp FROM ".$wpdb->prefix . 'botnetblocker'." ORDER BY timestamp DESC");
 	if ($wpdb->num_rows >= $bab_options['num_fails'] && (($fails[0]->timestamp + $bab_options['block_period_secs']) >= time())) {
 	echo '&#10008; ';
 	_e('Too many login failures, you are temporarily blocked', 'botnet-attack-blocker');
@@ -82,23 +133,31 @@ add_action('login_init', 'bab_login_init');
 # hook into login check and log failures to db - if past grace_period_secs of last fail start counting again (empty table)
 function bab_login_failed() {
 global $wpdb;
-$bab_options = get_option("bab_options");
-$last_ts = $wpdb->get_var("SELECT timestamp FROM ".$bab_options['table_name']." ORDER BY timestamp DESC LIMIT 1");
-	if (($last_ts + $bab_options['grace_period_secs']) < time()) $wpdb->query("DELETE FROM ".$bab_options['table_name']);
-$wpdb->insert($bab_options['table_name'], array('ip_address' => $_SERVER['REMOTE_ADDR'], 'timestamp' => time()), array('%s', '%d'));
+	if (!function_exists('is_plugin_active_for_network')) require_once(ABSPATH . '/wp-admin/includes/plugin.php');
+	if (is_plugin_active_for_network('botnet-attack-blocker/botnet-attack-blocker.php')) $bab_options = get_site_option("bab_options");
+	else $bab_options = get_option("bab_options");
+#$last_ts = $wpdb->get_var("SELECT timestamp FROM ".$wpdb->prefix . 'botnetblocker'." ORDER BY timestamp DESC LIMIT 1");
+$wpdb->insert($wpdb->prefix . 'botnetblocker', array('ip_address' => $_SERVER['REMOTE_ADDR'], 'timestamp' => time()), array('%s', '%d'));
+$expired = (time() - $bab_options['grace_period_secs']);
+$wpdb->query("DELETE FROM ".$wpdb->prefix . "botnetblocker WHERE timestamp < '".$expired."'");
 } //function
 add_action('wp_login_failed', 'bab_login_failed');
 
-# show admin menu
+# show admin menus
 function bab_admin_menu() {
 add_options_page('Botnet Attack Blocker', 'Botnet Blocker', 'manage_options', 'bab', 'bab_show_page'); 
 } //function
 add_action('admin_menu', 'bab_admin_menu');
+function bab_network_menu() {
+add_submenu_page('settings.php', 'Botnet Attack Blocker', 'Botnet Blocker', 'manage_network', 'bab', 'bab_show_page');
+} //function
+add_action('network_admin_menu', 'bab_network_menu');
 
 # show admin page
 function bab_show_page() {
 global $wpdb;
-$bab_options = get_option("bab_options");
+	if (is_plugin_active_for_network('botnet-attack-blocker/botnet-attack-blocker.php')) $bab_options = get_site_option("bab_options");
+	else $bab_options = get_option("bab_options");
 echo '<div class="wrap">
 <div class="icon32" id="icon-options-general"><br /></div>
 <h2>Botnet Attack Blocker</h2>
@@ -164,6 +223,11 @@ echo ' <select name="block_period_secs" id="block_period_secs">';
 		else _e('hour', 'botnet-attack-blocker');
 	echo '</option>'."\n";
 	} //for
+	echo '<option value="86400"';
+		if ($b2 == $bab_options['block_period_secs']) echo ' selected';
+	echo '>24 ';
+	_e('hours', 'botnet-attack-blocker');
+	echo '</option>'."\n";
 echo '</select>,<br />';
 _e('except from IP address(es)', 'botnet-attack-blocker');
 echo ' <input type="text" name="whitelist_ip" id="whitelist_ip" value="'.$bab_options['whitelist_ip'].'" />.</h2>
@@ -172,38 +236,41 @@ echo ' <input type="text" name="whitelist_ip" id="whitelist_ip" value="'.$bab_op
 _e('UPDATE', 'botnet-attack-blocker');
 echo '" class="button button-primary button-large" /> <span id="bab_callback" style="display:none;"></span>
 <br /><br />';
-_e('Current status', 'botnet-attack-blocker');
-echo ': ';
-$fails = $wpdb->get_results("SELECT timestamp FROM ".$bab_options['table_name']." ORDER BY timestamp DESC");
-	if ($wpdb->num_rows >= $bab_options['num_fails'] && (($fails[0]->timestamp + $bab_options['block_period_secs']) >= time())) {
-	echo '&#10008; ';
-	_e('blocked', 'botnet-attack-blocker');
-	echo ' (';
-	_e('will be released in', 'botnet-attack-blocker');
-	echo ' '.(($fails[0]->timestamp + $bab_options['block_period_secs']) - time()).' ';
-	_e('seconds', 'botnet-attack-blocker');
-	echo ')';
-	} //if blocked
+	if (is_plugin_active_for_network('botnet-attack-blocker/botnet-attack-blocker.php')) _e('', 'botnet-attack-blocker');
 	else {
-	echo '&#10004; ';
-	_e('not blocked', 'botnet-attack-blocker');
-		if (($fails[0]->timestamp + $bab_options['grace_period_secs']) <= time()) {
+	_e('Current status', 'botnet-attack-blocker');
+	echo ': ';
+	$fails = $wpdb->get_results("SELECT timestamp FROM ".$wpdb->prefix . 'botnetblocker'." ORDER BY timestamp DESC");
+		if ($wpdb->num_rows >= $bab_options['num_fails'] && (($fails[0]->timestamp + $bab_options['block_period_secs']) >= time())) {
+		echo '&#10008; ';
+		_e('blocked', 'botnet-attack-blocker');
 		echo ' (';
-		_e('no failed attempts in last', 'botnet-attack-blocker');
-		echo ' '.$bab_options['grace_period_secs'].' ';
+		_e('will be released in', 'botnet-attack-blocker');
+		echo ' '.(($fails[0]->timestamp + $bab_options['block_period_secs']) - time()).' ';
 		_e('seconds', 'botnet-attack-blocker');
 		echo ')';
-		} //if
+		} //if blocked
 		else {
-		echo ' ('.$wpdb->num_rows.' ';
-		_e('failed attempts', 'botnet-attack-blocker');
-		echo ', ';
-		_e('last one', 'botnet-attack-blocker');
-		echo ' '. (time() - $fails[0]->timestamp) .' ';
-		_e('seconds ago', 'botnet-attack-blocker');
-		echo ')';
+		echo '&#10004; ';
+		_e('not blocked', 'botnet-attack-blocker');
+			if (($fails[0]->timestamp + $bab_options['grace_period_secs']) <= time()) {
+			echo ' (';
+			_e('no failed attempts in last', 'botnet-attack-blocker');
+			echo ' '.$bab_options['grace_period_secs'].' ';
+			_e('seconds', 'botnet-attack-blocker');
+			echo ')';
+			} //if
+			else {
+			echo ' ('.$wpdb->num_rows.' ';
+			_e('failed attempts', 'botnet-attack-blocker');
+			echo ', ';
+			_e('last one', 'botnet-attack-blocker');
+			echo ' '. (time() - $fails[0]->timestamp) .' ';
+			_e('seconds ago', 'botnet-attack-blocker');
+			echo ')';
+			} //else
 		} //else
-	} //else
+	}//else
 echo '</form>';
 } //function
 
@@ -217,15 +284,29 @@ $bab_options = array(
 'grace_period_secs' => $_POST['grace_period_secs'],
 'block_period_secs' => $_POST['block_period_secs'],
 'whitelist_ip' => $_POST['whitelist_ip']);
-	if (update_option("bab_options", $bab_options)) {
-	echo '<span style="color:green;">&#10004; ';
-	_e('settings updated', 'botnet-attack-blocker');
-	echo '</span>';
+	if (is_plugin_active_for_network('botnet-attack-blocker/botnet-attack-blocker.php')) {
+	if (update_site_option("bab_options", $bab_options)) {
+		echo '<span style="color:green;">&#10004; ';
+		_e('settings updated', 'botnet-attack-blocker');
+		echo '</span>';
+		} //if
+		else {
+		echo '<span style="color:red;">&#10008; ';
+		_e('update failed', 'botnet-attack-blocker');
+		echo '</span>';
+		} //else
 	} //if
 	else {
-	echo '<span style="color:red;">&#10008; ';
-	_e('update failed', 'botnet-attack-blocker');
-	echo '</span>';
+		if (update_option("bab_options", $bab_options)) {
+		echo '<span style="color:green;">&#10004; ';
+		_e('settings updated', 'botnet-attack-blocker');
+		echo '</span>';
+		} //if
+		else {
+		echo '<span style="color:red;">&#10008; ';
+		_e('update failed', 'botnet-attack-blocker');
+		echo '</span>';
+		} //else
 	} //else
 die();
 } //function
