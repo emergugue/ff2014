@@ -170,15 +170,15 @@
 				<div class="navbar">
 					
 						<div class="container-fluid nav-container">
-                <nav role="navigation">
-  								<a id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>">
+                <nav role="navigation" class="row-fluid">
+  								<a id="logo" class="span3" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>">
                     <div class="brand"></div>
   								</a>
-                  <div>
+                  <!-- <div>
   									<?php /* bones_main_nav(); // Adjust using Menus in Wordpress Admin*/?> 
-  								</div>
-                  <div class="clearfix visible-phone"></div>
-                   <div class="row">
+  								</div> 
+                  <div class="clearfix visible-phone"></div>-->
+                   <div class="span9">
                       <?php if(qtrans_getLanguage() == 'es'): ?>
                       <ul class="menu menuholder"> 
                           <!-- <li class="menu_inicio hidden-phone"><a href="<?php echo home_url(); ?>" title="Inicio" class="active">Inicio</a></li> -->
@@ -200,35 +200,37 @@
                           <li class="menu_envivo"><a href="<?php echo home_url(); ?>/en/la-feria-en-vivo/" title="En Vivo">La Feria Live</a></li>
                       </ul>
                       <?php endif; ?>
+                      <div class="row barra-menu">
+                        <div class="hitler span4">
+                          <!--  <div class="fb-share-button" data-href="<?php echo home_url(); ?>" data-type="button"></div> -->
+                          <div class="fb-share-button" data-type="button"></div>
+                          <div class="g-plus" data-action="share" data-annotation="none"></div>
+                          <a href="https://twitter.com/share" class="twitter-share-button" data-lang="es" data-count="none" data-hashtags="FeriaDeLasFlores">Twittear</a>
+                        </div>
+                        <div class="span3 idioma">
+                            <!-- Widget de idioma -->   
+                            <?php if ( function_exists('dynamic_sidebar')) :
+                            dynamic_sidebar('idioma');
+                            ?>
+                          <?php endif; ?>
+                          <!-- Widget de idioma --> 
+                        </div> 
+                        <div class="span5 buscador visible-desktop">
+                              <?php if(qtrans_getLanguage() == 'es'): ?>
+                              <form action="<?php echo home_url(); ?>" method="get" class="form-stacked">
+                                <fieldset>
+                                  <div class="clearfix">
+                                    <div class="input-append input-prepend">
+                                      <span class="add-on"><i class="icon-search"></i></span><input type="text" name="s" id="search" placeholder="Buscar" value="" class="placeholder"><button type="submit" class="btn btn-primary">Buscar</button>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </form>
+                          <?php else: ?>
+                          <?php get_search_form( $echo ); ?>
+                          <?php endif; ?>
+                        </div>
                     </div>
-                    <div class="span3 idioma">
-                        <!-- Widget de idioma -->   
-                        <?php if ( function_exists('dynamic_sidebar')) :
-                        dynamic_sidebar('idioma');
-                        ?>
-                      <?php endif; ?>
-                      <!-- Widget de idioma --> 
-                    </div> 
-                    <div class="span3 offset2 buscador visible-desktop">
-                          <?php if(qtrans_getLanguage() == 'es'): ?>
-                          <form action="<?php echo home_url(); ?>" method="get" class="form-stacked">
-                            <fieldset>
-                              <div class="clearfix">
-                                <div class="input-append input-prepend">
-                                  <span class="add-on"><i class="icon-search"></i></span><input type="text" name="s" id="search" placeholder="Buscar" value="" class="placeholder"><button type="submit" class="btn btn-primary">Buscar</button>
-                                </div>
-                              </div>
-                            </fieldset>
-                          </form>
-                      <?php else: ?>
-                      <?php get_search_form( $echo ); ?>
-                      <?php endif; ?>
-                    </div>
-                    <div class="hitler">
-                      <!--  <div class="fb-share-button" data-href="<?php echo home_url(); ?>" data-type="button"></div> -->
-                      <div class="fb-share-button" data-type="button"></div>
-                      <div class="g-plus" data-action="share" data-annotation="none"></div>
-                      <a href="https://twitter.com/share" class="twitter-share-button" data-lang="es" data-count="none" data-hashtags="FeriaDeLasFlores">Twittear</a>
                     </div>
                   </div>
 							   </nav>

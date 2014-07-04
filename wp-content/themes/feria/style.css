@@ -138,8 +138,8 @@ body.admin-bar .navbar-fixed-top{
 .navbar .brand{
 	background-image:url(images/logoferia.png);
 	background-repeat:no-repeat;
-	width:122px;
-	height:140px;
+	width:165px;
+	height:165px;
 	float: left;
 	display: block;
 	padding:0;
@@ -156,10 +156,10 @@ body.admin-bar .navbar-fixed-top{
 
 .menu, .menuEn {
 	float:right;
-	width:780px;}
+	width:100%;}
 
 .menuholder, .menuholderEn {
-	width:780px;
+	width:100%;
 	}
 
 .menuholder li, .menuholderEn li{
@@ -169,7 +169,7 @@ body.admin-bar .navbar-fixed-top{
 .menuholder a, .menuholderEn a {
 	display:block; 
 	height: 10px;
-	padding: 48px 28px 15px 28px;
+	padding: 48px 22px 15px 22px;
 	background: url(images/iconos-menu.png) #57BBB1 no-repeat;
 	color: #fff;
 	border-bottom: 9px #53ADA3 solid;
@@ -177,7 +177,7 @@ body.admin-bar .navbar-fixed-top{
 .menuholder a:hover, .menuholderEn a:hover {
 	display:block; 
 	height: 10px;
-	padding: 48px 28px 15px 28px;
+	padding: 48px 22px 15px 22px;
 	background: url(images/iconos-menu.png) #E73F56 no-repeat;
 	color: #fff;
 	text-decoration: none;
@@ -209,6 +209,14 @@ body.admin-bar .navbar-fixed-top{
 .menu_saladeprensa a:hover {background-position:53px -254px;}
 .menu_contactenos a:hover {background-position:45px -339px;}
 .menu_envivo a:hover {background-position:27px -418px;}
+
+.barra-menu{
+	clear: both;
+	padding-top: 20px;
+}
+.fb-share-button{}
+.g-plus{}
+.twitter-share-button{}
 
 /*ESTADO ROLLOVER
 
