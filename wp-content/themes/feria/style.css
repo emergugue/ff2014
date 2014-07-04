@@ -129,16 +129,11 @@ body.admin-bar .navbar-fixed-top{
 .blanco {
 	background-color:#FFF;
 	width:100%;
+	border-bottom: 10px #57BBB1 solid
 }
 
-.lineaHeader {
-	background-image:url(images/lineaHeader.jpg);
-	background-repeat:repeat-x;
-	width:100%;
-	height:19px;}
-
 .navbar {
-	margin-top:20px;}
+	}
 
 .navbar .brand{
 	background-image:url(images/logoferia.png);
@@ -171,28 +166,51 @@ body.admin-bar .navbar-fixed-top{
 	float:left;
 	}
 
-.menuholder a {
-	background:url(images/menu.png);
+.menuholder a, .menuholderEn a {
 	display:block; 
-	height:85px;
-	text-indent:-9000%;}
-
-.menuholderEn a {
-	background:url(images/menuEn.png);
+	height: 10px;
+	padding: 48px 28px 15px 28px;
+	background: url(images/iconos-menu.png) #57BBB1 no-repeat;
+	color: #fff;
+	border-bottom: 9px #53ADA3 solid;
+	}
+.menuholder a:hover, .menuholderEn a:hover {
 	display:block; 
-	height:85px;
-	text-indent:-9000%;}
+	height: 10px;
+	padding: 48px 28px 15px 28px;
+	background: url(images/iconos-menu.png) #E73F56 no-repeat;
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 9px #D3304F solid;
+	}
+.menuholder li:first-child a, .menuholderEn li:first-child a{
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-left-radius: 10px;
+}
+.menuholder li:last-child a, .menuholderEn li:first-child a{
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-bottom-right-radius: 10px;
+}
+ 
 
 /*ESTADO NORMAL*/
-.menu_inicio a {width:60px;}
-.menu_programacion a {width:148px; background-position:-60px 0px;}
-.menu_turistica a {width:116px; background-position:-208px 0px;}
-.menu_historia a {width:105px; background-position:-321px 0px; }
-.menu_saladeprensa a {width:110px; background-position:-426px 0px; margin:0 5px 0 0;}
-.menu_contactenos a {width:121px; background-position:-547px 0px;}
-.menu_envivo a {width:115px; background-position:-668px 0px;}
+.menu_programacion a {background-position:47px 0px;}
+.menu_turistica a {background-position:47px -80px;}
+.menu_historia a {background-position:27px -164px; }
+.menu_saladeprensa a {background-position:53px -254px;}
+.menu_contactenos a {background-position:45px -339px;}
+.menu_envivo a {background-position:27px -418px;}
 
-/*ESTADO ROLLOVER*/
+.menu_programacion a:hover {background-position:47px 0px;}
+.menu_turistica a:hover {background-position:47px -80px;}
+.menu_historia a:hover {background-position:27px -164px; }
+.menu_saladeprensa a:hover {background-position:53px -254px;}
+.menu_contactenos a:hover {background-position:45px -339px;}
+.menu_envivo a:hover {background-position:27px -418px;}
+
+/*ESTADO ROLLOVER
 
 .menu_inicio a:hover {background-position:0px -88px;}
 .menu_programacion a:hover { background-position:-60px -88px;}
@@ -200,7 +218,7 @@ body.admin-bar .navbar-fixed-top{
 .menu_historia a:hover {background-position:-321px -88px;}
 .menu_saladeprensa a:hover {background-position:-426px -88px;}
 .menu_contactenos a:hover {background-position:-547px -88px;}
-.menu_envivo a:hover {background-position:-668px -88px;}
+.menu_envivo a:hover {background-position:-668px -88px;}*/
 
 .btn_concurso {max-width:100%; height:50px; background:url(images/btn_concursos.png); display:block; text-indent:-9000%; margin:0 auto; background-repeat:no-repeat;}
 .btn_concurso:hover {background-position:0px -50px;}

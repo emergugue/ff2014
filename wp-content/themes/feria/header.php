@@ -165,83 +165,73 @@
                 
             </div>
          </div>
-            <div class="lineaHeader"></div>
         
 			<div id="inner-header" class="clearfix">
 				<div class="navbar">
 					
 						<div class="container-fluid nav-container">
-                        
-                        
-							
-                            <nav role="navigation">
-								<a id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>">
-                                <div class="brand"></div>
-								</a>
-                                
-                                                            
-                                 <div>
-									<?php /* bones_main_nav(); // Adjust using Menus in Wordpress Admin*/?> 
-								</div>
-
-                                <div class="clearfix visible-phone"></div>
-                               
-                               <div class="row">
-                                <?php if(qtrans_getLanguage() == 'es'): ?>
-                                <ul class="menu menuholder"> 
-                                    <li class="menu_inicio hidden-phone"><a href="<?php echo home_url(); ?>" title="Inicio" class="active">Inicio</a></li>
-                                    <li class="menu_programacion"><a href="<?php echo home_url(); ?>/category/programacion/" title="Programación">Programación</a></li>
-                                    <li class="menu_turistica"><a href="<?php echo home_url(); ?>/category/infoturistica/" title="Info Turística">Info Turística</a></li>
-                                    <li class="menu_historia"><a href="<?php echo home_url(); ?>/category/historia/" title="Historia">Historia</a></li>
-                                    <li class="menu_saladeprensa"><a href="<?php echo home_url(); ?>/category/saladeprensa/" title="Sala de Prensa">Sala de Prensa</a></li>
-                                    <li class="menu_contactenos"><a href="<?php echo home_url(); ?>/contacto" title="Contáctenos">Contáctenos</a></li>
-                                    <li class="menu_envivo"><a href="<?php echo home_url(); ?>/la-feria-en-vivo/" title="En Vivo">En Vivo</a></li>
-                                </ul>
-                                <?php else: ?>
-                                 <ul class="menuEn menuholderEn hidden-phone"> 
-                                    <li class="menu_inicio"><a href="<?php echo home_url(); ?>/en/" title="Inicio" class="active">Inicio</a></li>
-                                    <li class="menu_programacion"><a href="<?php echo home_url(); ?>/en/category/programacion/" title="Programación">Schedule</a></li>
-                                    <li class="menu_turistica"><a href="<?php echo home_url(); ?>/en/category/infoturistica/" title="Info Turística">Four Turist</a></li>
-                                    <li class="menu_historia"><a href="<?php echo home_url(); ?>/en/category/historia/" title="Historia">History</a></li>
-                                    <li class="menu_saladeprensa"><a href="<?php echo home_url(); ?>/en/category/saladeprensa/" title="Sala de Prensa">Press Room</a></li>
-                                    <li class="menu_contactenos"><a href="<?php echo home_url(); ?>/en/contacto/" title="Contact us">Contact us</a></li>
-                                    <li class="menu_envivo"><a href="<?php echo home_url(); ?>/en/la-feria-en-vivo/" title="En Vivo">La Feria Live</a></li>
-                                </ul>
-                                <?php endif; ?>
-                                
-                               
-
-                                <div class="span3 idioma">
-                                  <!-- Widget de idioma -->   
-                                  <?php if ( function_exists('dynamic_sidebar')) :
-                                  dynamic_sidebar('idioma');
-                                  ?>
-                                <?php endif; ?>
-                                <!-- Widget de idioma --> 
-                              </div> 
-                              <div class="span3 offset2 buscador visible-desktop">
-                                <?php if(qtrans_getLanguage() == 'es'): ?>
-                                <form action="<?php echo home_url(); ?>" method="get" class="form-stacked">
-                                  <fieldset>
-                                    <div class="clearfix">
-                                      <div class="input-append input-prepend">
-                                        <span class="add-on"><i class="icon-search"></i></span><input type="text" name="s" id="search" placeholder="Buscar" value="" class="placeholder"><button type="submit" class="btn btn-primary">Buscar</button>
-                                      </div>
-                                    </div>
-                                  </fieldset>
-                                </form>
-                              <?php else: ?>
-                              <?php get_search_form( $echo ); ?>
-                            <?php endif; ?>
-                          </div>
-                          <div class="hitler">
-                          <!--  <div class="fb-share-button" data-href="<?php echo home_url(); ?>" data-type="button"></div> -->
-                          <div class="fb-share-button" data-type="button"></div>
-                            <div class="g-plus" data-action="share" data-annotation="none"></div>
-                            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="es" data-count="none" data-hashtags="FeriaDeLasFlores">Twittear</a>
-                          </div>
-                        </div>
-							</nav>
+                <nav role="navigation">
+  								<a id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>">
+                    <div class="brand"></div>
+  								</a>
+                  <div>
+  									<?php /* bones_main_nav(); // Adjust using Menus in Wordpress Admin*/?> 
+  								</div>
+                  <div class="clearfix visible-phone"></div>
+                   <div class="row">
+                      <?php if(qtrans_getLanguage() == 'es'): ?>
+                      <ul class="menu menuholder"> 
+                          <!-- <li class="menu_inicio hidden-phone"><a href="<?php echo home_url(); ?>" title="Inicio" class="active">Inicio</a></li> -->
+                          <li class="menu_programacion"><a href="<?php echo home_url(); ?>/category/programacion/" title="Programación">Programación</a></li>
+                          <li class="menu_turistica"><a href="<?php echo home_url(); ?>/category/infoturistica/" title="Info Turística">Info Turística</a></li>
+                          <li class="menu_historia"><a href="<?php echo home_url(); ?>/category/historia/" title="Historia">Historia</a></li>
+                          <li class="menu_saladeprensa"><a href="<?php echo home_url(); ?>/category/saladeprensa/" title="Sala de Prensa">Sala de Prensa</a></li>
+                          <li class="menu_contactenos"><a href="<?php echo home_url(); ?>/contacto" title="Contáctenos">Contáctenos</a></li>
+                          <li class="menu_envivo"><a href="<?php echo home_url(); ?>/la-feria-en-vivo/" title="En Vivo">En Vivo</a></li>
+                      </ul>
+                      <?php else: ?>
+                       <ul class="menuEn menuholderEn hidden-phone"> 
+                          <!-- <li class="menu_inicio"><a href="<?php echo home_url(); ?>/en/" title="Inicio" class="active">Inicio</a></li> -->
+                          <li class="menu_programacion"><a href="<?php echo home_url(); ?>/en/category/programacion/" title="Programación">Schedule</a></li>
+                          <li class="menu_turistica"><a href="<?php echo home_url(); ?>/en/category/infoturistica/" title="Info Turística">Four Turist</a></li>
+                          <li class="menu_historia"><a href="<?php echo home_url(); ?>/en/category/historia/" title="Historia">History</a></li>
+                          <li class="menu_saladeprensa"><a href="<?php echo home_url(); ?>/en/category/saladeprensa/" title="Sala de Prensa">Press Room</a></li>
+                          <li class="menu_contactenos"><a href="<?php echo home_url(); ?>/en/contacto/" title="Contact us">Contact us</a></li>
+                          <li class="menu_envivo"><a href="<?php echo home_url(); ?>/en/la-feria-en-vivo/" title="En Vivo">La Feria Live</a></li>
+                      </ul>
+                      <?php endif; ?>
+                    </div>
+                    <div class="span3 idioma">
+                        <!-- Widget de idioma -->   
+                        <?php if ( function_exists('dynamic_sidebar')) :
+                        dynamic_sidebar('idioma');
+                        ?>
+                      <?php endif; ?>
+                      <!-- Widget de idioma --> 
+                    </div> 
+                    <div class="span3 offset2 buscador visible-desktop">
+                          <?php if(qtrans_getLanguage() == 'es'): ?>
+                          <form action="<?php echo home_url(); ?>" method="get" class="form-stacked">
+                            <fieldset>
+                              <div class="clearfix">
+                                <div class="input-append input-prepend">
+                                  <span class="add-on"><i class="icon-search"></i></span><input type="text" name="s" id="search" placeholder="Buscar" value="" class="placeholder"><button type="submit" class="btn btn-primary">Buscar</button>
+                                </div>
+                              </div>
+                            </fieldset>
+                          </form>
+                      <?php else: ?>
+                      <?php get_search_form( $echo ); ?>
+                      <?php endif; ?>
+                    </div>
+                    <div class="hitler">
+                      <!--  <div class="fb-share-button" data-href="<?php echo home_url(); ?>" data-type="button"></div> -->
+                      <div class="fb-share-button" data-type="button"></div>
+                      <div class="g-plus" data-action="share" data-annotation="none"></div>
+                      <a href="https://twitter.com/share" class="twitter-share-button" data-lang="es" data-count="none" data-hashtags="FeriaDeLasFlores">Twittear</a>
+                    </div>
+                  </div>
+							   </nav>
 							
 							<?php if(of_get_option('search_bar', '1')) {?>
 							<form class="navbar-search pull-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
