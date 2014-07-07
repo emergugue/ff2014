@@ -29,14 +29,11 @@
 		  ?>
       <div id="widget-hoy" class="span12" >
         <article id="art-hoy">
-          <header>
-            <div class="enc-izq">
-              <img src="" alt>
-            </div>
-            <div class="enc-central">
+          <header class="row-fluid">
+            <div class="encabezado span10">
               <h1>Hoy en la Feria</h1>
             </div>
-            <div class="enc-central">
+            <div class="btn-programacion span2">
               <span> <a href="/ff2014/programacion/" >Ver todos los eventos </a> </span>
             </div>
           </header>

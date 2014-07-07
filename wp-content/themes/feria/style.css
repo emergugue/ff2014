@@ -572,6 +572,9 @@ span.hoy {
 	line-height:30px;
 	text-align:center;
 	}
+#novedades{
+	clear: both;
+}
 
 #novedades .tit .ver {
 	font-size:16px;
@@ -630,10 +633,25 @@ span.hoy {
 	 background:#09F;
 	}
 
+
+/*Widget programación del home*/
+#art-hoy header{
+	background: #FDD13D;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 4px 4px 0 1px #F5A641;
+	box-shadow: 4px 4px 0 1px #F5A641;
+	padding: 5px 5px 0px 75px;
+	}
+.encabezado h1{
+	color: #A97627;
+	font-family: 'Coolvetica';
+	font-size: 3em;
+}
 #novedades span  {
 	display:block;
 }
-
 
 #novedades .tit .icono {
 	width:78px; height:55px;
@@ -1327,8 +1345,6 @@ input, textarea, select, .uneditable-input {
 	color:#FFF;
 	
 	}
-	
-
 
 .logoDescarga, .logosVarios {
 	width:307px;
@@ -1352,10 +1368,6 @@ input, textarea, select, .uneditable-input {
 	background-image:url(images/logosvarios.png);
 	background-repeat:no-repeat;
 	}
-
-
-
-
 
 /* SINGLE */
 
