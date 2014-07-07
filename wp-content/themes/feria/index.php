@@ -39,16 +39,17 @@ if ($blog_hero){
             </div><!-- cierra .titManana --> 
         </div>
          </div>
-            
+    <div class="clearfix row-fluid">
+        <!-- widget de eventos de hoy en la feria -->
+        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar2') ) : 
+              endif;
+        ?>
+    </div>            
     <div class="clearfix row-fluid">
       <!-- AQUÍ IBA HOY EN LA FERIA -->
       <!-- AQUI IBA NO TE MIERDAS MAÑANA -->
       <div class="row-fluid">
         <div class="span8">
-          <!-- widget de eventos de hoy en la feria -->
-          <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar2') ) : 
-                endif;
-          ?>
           <div id="novedades">  
            <?php if(qtrans_getLanguage() == 'es'): ?>
              <div class="tit">
