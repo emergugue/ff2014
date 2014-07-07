@@ -55,7 +55,8 @@
   
   $myQuery = new WP_Query(array(
        'cat' => 10,
-        'posts_per_page' => -1
+        'posts_per_page' => -1,
+        'tag' => 'destacado'
   ));
   // The Loop
   if ( $myQuery->have_posts() ):
