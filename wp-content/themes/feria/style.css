@@ -644,6 +644,9 @@ span.hoy {
 	box-shadow: 4px 4px 0 1px #F5A641;
 	padding: 5px 5px 0px 75px;
 	margin: 0 0 20px 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 	}
 .encabezado h1{
 	color: #A97627;
@@ -674,10 +677,16 @@ span.hoy {
 	text-decoration: none;
 }
 #myCarouselHome{
-	width: 100%;
+	
+}
+#myCarouselHome.carousel{
+	padding: 0 20px 0px 40px;
 }
 .carousel-inner .element {
 	position: relative;
+}
+.carousel-inner .element .thumb img{
+	width: 100%;
 }
 .carousel-inner .element h2 {
 	box-shadow: initial;
@@ -694,8 +703,26 @@ span.hoy {
 	border-radius: 6px;
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
-	width: 94%;
+	width: 93%;
+	font-weight: 700;
 }
+.carousel-inner a:hover .element h2{
+	background: #5584aa
+}
+a.carousel-control{
+	background: url(images/flechas-widget.png) no-repeat left;
+	height: 185px;
+	top: 15%;
+	border: none;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	opacity: inherit;
+	text-indent: -9000px;
+}
+a.carousel-control.right {
+	background-position: -61px 0px;
+	}
 
 #novedades .tit .icono {
 	width:78px; height:55px;
