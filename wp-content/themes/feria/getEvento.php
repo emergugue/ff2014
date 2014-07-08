@@ -10,12 +10,6 @@ $myQuery = new WP_Query(array(
      'tag'=>'destacado',
 ));
 
-/*$myQuery2 = new WP_Query('tag != destacado',array(
-     'cat' => 10,
-     'posts_per_page' => -1,
-     'orderby' => 'meta_value', 
-     'meta_key' => 'hora_inicio'
-));*/
 // The Loop
 
       if ( $myQuery->have_posts() ):
@@ -33,6 +27,7 @@ $myQuery = new WP_Query(array(
     $jornada = get_post_meta($post->ID,'jornada',true);
     $lugar = get_post_meta($post->ID,'lugar',true);
     $telefono = get_post_meta($post->ID,'telefono',true);
+    $precio   = ( !empty(get_post_meta($post->ID,'precio',true)) ? get_post_meta($post->ID,'precio',true) : 'Gratis' ) ;
 
     $jornadas = explode(',', $jornada);
     $humanHoraInicio = date("g:i a", strtotime($horaInicio));
@@ -69,6 +64,7 @@ $myQuery = new WP_Query(array(
           <i class="icon-time"></i> <strong> Hora:</strong> <?php echo $humanHoraInicio ?> <?php echo ($tieneHoraFin) ? " a $humanHoraFin" : "" ?></li>
           <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> <?php echo $lugar ?></li>
           <li><i class="icon-star"></i> <strong>Teléfono:</strong> <?php echo $telefono ?></li>
+           <li><i class="icon-star"></i> <strong>Precio:</strong> <?php echo $precio ?></li>
         </ul>
       </div>
       </a>
@@ -102,6 +98,7 @@ $myQuery = new WP_Query(array(
         $jornada = get_post_meta($post->ID,'jornada',true);
         $lugar = get_post_meta($post->ID,'lugar',true);
         $telefono = get_post_meta($post->ID,'telefono',true);
+        $precio   = ( !empty(get_post_meta($post->ID,'precio',true)) ? get_post_meta($post->ID,'precio',true) : 'Gratis' ) ;
 
         $jornadas = explode(',', $jornada);
         $humanHoraInicio = date("g:i a", strtotime($horaInicio));
@@ -140,12 +137,12 @@ $myQuery = new WP_Query(array(
                     <i class="icon-time"></i> <strong> Hora:</strong> <?php echo $humanHoraInicio ?> <?php echo ($tieneHoraFin) ? " a $humanHoraFin" : "" ?></li>
                     <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> <?php echo $lugar ?></li>
                     <li><i class="icon-star"></i> <strong>Teléfono:</strong> <?php echo $telefono ?></li>
+                     <li><i class="icon-star"></i> <strong>Precio:</strong> <?php echo $precio ?></li>
                   </ul>
                 </div>
                 </a>  
-            <?php endif; ?>
-        <?php endif; ?>
-    <?php 
+            <?php endif;
+           endif;
     endwhile;
     endif;
 

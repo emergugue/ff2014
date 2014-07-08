@@ -73,6 +73,7 @@
     $jornada = get_post_meta($post->ID,'jornada',true);
     $lugar = get_post_meta($post->ID,'lugar',true);
     $telefono = get_post_meta($post->ID,'telefono',true);
+    $precio   = ( !empty(get_post_meta($post->ID,'precio',true)) ? get_post_meta($post->ID,'precio',true) : 'Gratis' ) ;
 
     $jornadas = explode(',', $jornada);
     $humanHoraInicio = date("g:i a", strtotime($horaInicio));
@@ -108,11 +109,11 @@
           <li><i class="icon-time"></i> <strong> Hora:</strong> <?php echo $humanHoraInicio ?> <?php echo ($tieneHoraFin) ? " a $humanHoraFin" : "" ?></li>
           <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> <?php echo $lugar ?></li>
           <li><i class="icon-star"></i> <strong>Teléfono:</strong> <?php echo $telefono ?></li>
+          <li><i class="icon-star"></i> <strong>Precio:</strong> <?php echo $precio ?></li>
         </ul>
       </div>
     </a>
-    <?php endif; ?>
-    <?php 
+    <?php endif;
     endwhile;
   endif;
 
@@ -138,6 +139,7 @@
     $jornada = get_post_meta($post->ID,'jornada',true);
     $lugar = get_post_meta($post->ID,'lugar',true);
     $telefono = get_post_meta($post->ID,'telefono',true);
+    $precio   = ( !empty(get_post_meta($post->ID,'precio',true)) ? get_post_meta($post->ID,'precio',true) : 'Gratis' ) ;
 
     $jornadas = explode(',', $jornada);
     $humanHoraInicio = date("g:i a", strtotime($horaInicio));
@@ -165,7 +167,6 @@
       }
     }
       if( empty( $evento_class ) ): ?>
-     ?>
     <a href="<?php the_permalink(); ?>">
       <div class="element <?php echo $class.' '.$evento_class ?>">
         <h2>
@@ -175,12 +176,12 @@
           <li><i class="icon-time"></i> <strong> Hora:</strong> <?php echo $humanHoraInicio ?> <?php echo ($tieneHoraFin) ? " a $humanHoraFin" : "" ?></li>
           <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> <?php echo $lugar ?></li>
           <li><i class="icon-star"></i> <strong>Teléfono:</strong> <?php echo $telefono ?></li>
+          <li><i class="icon-star"></i> <strong>Precio:</strong> <?php echo $precio ?></li>
         </ul>
       </div>
     </a>
-      <?php endif; ?>
-    <?php endif; ?>
-    <?php 
+      <?php endif;
+     endif;
     endwhile;
   endif;
 
