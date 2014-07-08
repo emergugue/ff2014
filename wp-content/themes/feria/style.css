@@ -636,7 +636,7 @@ span.hoy {
 
 /*Widget programación del home*/
 #art-hoy header{
-	background: #FDD13D;
+	background: url(images/icon-titulo-witget.png) no-repeat 15px 13px #FDD13D;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -2445,15 +2445,5 @@ clear:both;
 
 .destacado h2
 {
-    border-radius: 6px;
-    box-shadow: 2px 3px 1px #05B614;
-    margin: 5px 5px 5px 0px;
-    padding: 10px;
-    color: #FFF;
-    font-size: 14px;
-    line-height: 18px;
-    height: 60px;
-    display: block;
-    vertical-align: middle;
-    background-color: rgba(69, 191, 38, 1);
+   
 }
