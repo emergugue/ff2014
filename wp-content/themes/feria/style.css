@@ -643,6 +643,7 @@ span.hoy {
 	-webkit-box-shadow: 4px 4px 0 1px #F5A641;
 	box-shadow: 4px 4px 0 1px #F5A641;
 	padding: 5px 5px 0px 75px;
+	margin: 0 0 20px 0;
 	}
 .encabezado h1{
 	color: #A97627;
@@ -651,6 +652,26 @@ span.hoy {
 }
 #novedades span  {
 	display:block;
+}
+.btn-programacion a{
+	display: block;
+	background: #F2C339;
+	padding: 12px 12px 12px 12px;
+	text-align: center;
+	margin: -4px -5px 0 0;
+	color: #A97627;
+	font-weight: 700;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	}
+.btn-programacion a:hover{
+	background: #A97627;
+	color: #fff;
+	text-decoration: none;
 }
 
 #novedades .tit .icono {
