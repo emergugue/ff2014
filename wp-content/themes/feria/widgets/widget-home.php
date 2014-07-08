@@ -49,7 +49,8 @@
 
 
                   $post_thumbnail_id  = get_post_thumbnail_id(get_the_ID(), 'thumbnail');
-                  $post_thumbnail = (!empty(get_the_post_thumbnail($page->ID, 'thumbnail') ) ) ? get_the_post_thumbnail($page->ID, 'thumbnail')  : '<img height="150" src="'.get_template_directory_uri().'/images/tumb-generico.jpg'.'" >' ;
+                  $get_post_t         = get_the_post_thumbnail($page->ID, 'thumbnail');
+                  $post_thumbnail = (!empty($get_post_t ) ) ? get_the_post_thumbnail($page->ID, 'thumbnail')  : '<img height="150" src="'.get_template_directory_uri().'/images/tumb-generico.jpg'.'" >' ;
 
                   $fechaInicio       = get_post_meta(get_the_ID(),'fecha_inicio',true);
                   $fechaInicio       = strtotime($fechaInicio);
