@@ -49,7 +49,7 @@
 
 
                   $post_thumbnail_id  = get_post_thumbnail_id(get_the_ID(), 'thumbnail');
-                  $post_thumbnail_url = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
+                  $post_thumbnail = (!empty(get_the_post_thumbnail($page->ID, 'thumbnail') ) ) ? get_the_post_thumbnail($page->ID, 'thumbnail')  : '<img height="150" src="'.get_template_directory_uri().'/images/tumb-generico.jpg'.'" >' ;
 
                   $fechaInicio       = get_post_meta(get_the_ID(),'fecha_inicio',true);
                   $fechaInicio       = strtotime($fechaInicio);
@@ -75,7 +75,7 @@
                       <a href="<?php the_permalink() ?>" alt="<?php the_title_attribute(); ?>" >
                         <div id="post-<?php echo get_the_ID(); ?>" class="element span4" >
                           <div class="thumb">
-                            <?php echo get_the_post_thumbnail($page->ID, 'thumbnail') ?>
+                            <?php echo $post_thumbnail; ?>
                            <!-- <img alt="<?php the_title(); ?>" src="<?php echo $post_thumbnail_url ?>"  >  -->
                           </div>
                           <h2><?php the_title(); ?></h2>
