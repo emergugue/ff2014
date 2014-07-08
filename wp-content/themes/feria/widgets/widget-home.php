@@ -25,6 +25,7 @@
 		  /* Se muestra el título del widget */
 		  echo $before_widget;
       $i        = 0;
+      $g        = 1;
       $default  = 'active item';
 		  ?>
       <div id="widget-hoy" class="span12" >
@@ -47,11 +48,24 @@
               if ($query->have_posts()) :
                 while ($query->have_posts() ) : $query->the_post();
 
-
                   $post_thumbnail_id  = get_post_thumbnail_id(get_the_ID(), 'thumbnail');
                   $get_post_t         = get_the_post_thumbnail($page->ID, 'thumbnail');
-                  $post_thumbnail = (!empty($get_post_t ) ) ? get_the_post_thumbnail($page->ID, 'thumbnail')  : '<img height="150" src="'.get_template_directory_uri().'/images/tumb-generico.jpg'.'" >' ;
+                  if( !empty($get_post_t ) )
+                  {
+                    $post_thumbnail     =  $get_post_t;
+                  }
+                  else
+                  {
+                    $post_thumbnail = '<img height="150" src="'.get_template_directory_uri().'/images/tumb-generico'.$g.'.jpg'.'" >';
+                    $g = $g + 1 ;
 
+                    if($g >= 3 )
+                    {
+                      $g = 1;
+                    }
+                  }
+
+                  //$post_thumbnail     = (!empty($get_post_t ) ) ? get_the_post_thumbnail($page->ID, 'thumbnail')  : '<img height="150" src="'.get_template_directory_uri().'/images/tumb-generico.jpg'.'" >' ;
                   $fechaInicio       = get_post_meta(get_the_ID(),'fecha_inicio',true);
                   $fechaInicio       = strtotime($fechaInicio);
                   $fechaFin          = get_post_meta($post->ID,'fecha_fin',true);
