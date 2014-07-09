@@ -1489,7 +1489,9 @@ input, textarea, select, .uneditable-input {
 	border-bottom: 1px solid #eeeeee;
 	}
 
-
+.calendar{
+	width: 100%;
+}
 
 /* FOOTER */
 
@@ -1502,7 +1504,63 @@ footer{
 	margin-top:40px;
 	padding:30px 0 0 0;
 	}
-
+.patrocinadores{
+	text-align: center;
+	width: 61%;
+	margin: 15px auto 0 auto;
+}
+.titulo-patrocinadores{
+	display: block;
+	margin: 15px 0 0 0;
+}
+.patrocinadores a{
+	opacity: 0.7;
+}
+.patrocinadores a:hover{
+	opacity: 1.0;
+}
+.cocacola{
+	background: url(images/patrocinadores.jpg) no-repeat 0px 0px;	
+	height: 60px;
+	width: 120px;
+	display: block;
+	text-indent: -9999px;
+}
+.epm{
+	background: url(images/patrocinadores.jpg) no-repeat -120px 0px;	
+	height: 60px;
+	width: 105px;
+	display: block;
+	text-indent: -9999px;
+}
+.fla{
+	background: url(images/patrocinadores.jpg) no-repeat -225px 0px;	
+	height: 60px;
+	width: 80px;
+	display: block;
+	text-indent: -9999px;
+}
+.tigo{
+	background: url(images/patrocinadores.jpg) no-repeat -320px 0px;	
+	height: 60px;
+	width: 60px;
+	display: block;
+	text-indent: -9999px;
+}
+.pilsen{
+	background: url(images/patrocinadores.jpg) no-repeat -400px 0px;	
+	height: 60px;
+	width: 80px;
+	display: block;
+	text-indent: -9999px;
+}
+.une{
+	background: url(images/patrocinadores.jpg) no-repeat -500px 0px;	
+	height: 60px;
+	width: 55px;
+	display: block;
+	text-indent: -9999px;
+}
 .Decoration {
 	background-image:url(images/adorno.png);
 	background-position:center;
@@ -1511,7 +1569,7 @@ footer{
 	}	
 
 #inner-footer {
-	background-color:#093;
+	
 }
 
 
@@ -2282,9 +2340,11 @@ text-shadow: 0 1px 0 #ffffff;
 
 /* PROGRAMACION */
 .calendario {
-	margin-bottom:20px; }
+	margin-bottom:20px; 
+}
 .EventosDestacados {
-	display:none;}
+	display:none;
+}
 
 .element {
  float:none;
@@ -2315,8 +2375,8 @@ height: 200px;
 width: 100%;
 margin-top: 0px;
 padding: 0px 0 0 0;
+}
 
- }
 .noticiaHome img {
 float: none;
 margin: 0 auto;
@@ -2327,9 +2387,12 @@ text-align:center;
 float: none;
 width: 72px;
 clear:both;
-}
  }
-
+.destacado h2{
+	padding: 10px 65px 10px 10px;
+	background: url(images/destacado.png) #86b8e2 no-repeat right -10px;
+}
+}
 @media only screen and (min-width: 768px) {
 	.carousel-caption p{
 		display: block;
@@ -2342,10 +2405,6 @@ clear:both;
 		padding-right: 20px;
 		text-align:center;
 	}
-	
-
-	
-	
 }
 
 @media only screen and (min-width: 980px) {
@@ -2443,7 +2502,3 @@ clear:both;
 	line-height: 30px;
 }
 
-.destacado h2
-{
-   
-}
