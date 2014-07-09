@@ -144,4 +144,12 @@ jQuery(document).ready(function($) {
     .parent().addClass($.support.fileInput ? undefined : 'disabled');
 	}
 
+	if( $('#myCarouselHome').length )
+	{
+		if( !$('.item').length )
+		{
+			$('#myCarouselHome').css('display', 'none');		
+		}
+	}
+
 }); /* end of as page load scripts */
