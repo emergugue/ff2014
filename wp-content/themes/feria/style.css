@@ -156,7 +156,9 @@ body.admin-bar .navbar-fixed-top{
 	padding-left: 0;
 	padding-right: 0;
 }
-
+#menu-icon{
+	display: none;
+}
 .menu, .menuEn {
 	float:right;
 	width:100%;}
@@ -216,6 +218,9 @@ body.admin-bar .navbar-fixed-top{
 .barra-menu{
 	clear: both;
 	padding-top: 20px;
+	width: 77%;
+	float: right;
+	margin-top: -90px;
 }
 .fb-share-button{}
 .g-plus{}
@@ -1508,6 +1513,8 @@ footer{
 	text-align: center;
 	width: 61%;
 	margin: 15px auto 0 auto;
+	overflow: auto;
+
 }
 .titulo-patrocinadores{
 	display: block;
@@ -1558,6 +1565,31 @@ footer{
 	background: url(images/patrocinadores.jpg) no-repeat -500px 0px;	
 	height: 60px;
 	width: 55px;
+	display: block;
+	text-indent: -9999px;
+}
+.titulo-organizadores{
+	display: block;
+	clear: both;
+	margin: 15px 0 0 0;
+}
+.organizadores{
+	text-align: center;
+	width: 70%;
+	margin: 15px auto 30px auto;
+	overflow: auto;
+}
+.mincultura{
+	background: url(images/patrocinadores.jpg) no-repeat 0px -77px;
+	height: 60px;
+	width: 300px;
+	display: block;
+	text-indent: -9999px;
+}
+.alcaldia{
+	background: url(images/patrocinadores.jpg) no-repeat -300px -77px;
+	height: 60px;
+	width: 300px;
 	display: block;
 	text-indent: -9999px;
 }
@@ -2267,55 +2299,92 @@ text-shadow: 0 1px 0 #ffffff;
 	width:300px;
 	height:118px;
 	}
-
+#menu-icon{
+	display: block;
+	padding: 20px;
+	font-size:1.5em;
+	background: #57BBB1 url(images/menu-icon.png) no-repeat right center;
+	background-size: contain;
+	color: #fff;
+}
 .menu, .menuEn {
 	float:none;
 	width:100%;}
 
 .menuholder, .menuholderEn {
 	width:100%;
+	margin: 0;
 	}
 
 .menuholder li, .menuholderEn li{
-	float:left;
 	margin-bottom:-10px;
+	float: none;
 	}
 
 .menuholder a {
-	background:url(images/menu.png);
+	width: 100%;
+	/*background:url(images/iconos-menu.png);*/
 	display:block; 
-	height:85px;
-	text-indent:-9000%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	height: auto;
+	padding: 25px 25px 25px 60px;
+	border-bottom: solid #fff 2px;
+	margin-bottom: 10px;
+	font-size: 1.3em
 	}
-
+.menuholder a:hover {
+	width: 100%;
+	/*background:url(images/iconos-menu.png);*/
+	display:block; 
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	height: auto;
+	padding: 25px 25px 25px 60px;
+	border-bottom: solid #fff 2px;
+	margin-bottom: 10px;
+	font-size: 1.3em
+	}
+.menuholder li:first-child a, .menuholderEn li:first-child a{
+	-webkit-border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	border-bottom-left-radius: 0px;
+}
+.menuholder li:last-child a, .menuholderEn li:first-child a{
+	-webkit-border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	border-bottom-right-radius: 0px;
+}
 .menuholderEn a {
-	background:url(images/menuEn.png);
+	width: 100%;
+	/*background:url(images/menuEn.png);*/
 	display:block; 
 	height:85px;
-	text-indent:-9000%;
 }
 
 /*ESTADO NORMAL*/
 .menu_inicio a {width:60px;}
-.menu_programacion a {width:145px; background-position:-60px 0px;}
-.menu_turistica a {width:116px; background-position:-208px 0px;}
-.menu_historia a {width:111px; background-position:-321px 0px; }
-.menu_saladeprensa a {width:105px; background-position:-436px 0px; margin:0 5px 0 0;}
-.menu_contactenos a {width:114px; background-position:-547px 0px;}
-.menu_envivo a {width:118px; background-position:-660px 0px;}
+.menu_programacion a {background-position:5px 7px;}
+.menu_turistica a {background-position:5px -70px;}
+.menu_historia a {background-position:5px -153px; }
+.menu_saladeprensa a {background-position:5px -243px;}
+.menu_contactenos a {background-position:5px -328px;}
+.menu_envivo a {background-position:5px -409px;}
+
+.menu_inicio a:hover {width:60px;}
+.menu_programacion a:hover {background-position:5px 7px;}
+.menu_turistica a:hover {background-position:5px -70px;}
+.menu_historia a:hover {background-position:5px -153px; }
+.menu_saladeprensa a:hover {background-position:5px -243px;}
+.menu_contactenos a:hover {background-position:5px -328px;}
+.menu_envivo a:hover {background-position:5px -409px;}
 
 
-
-/*ESTADO ROLLOVER*/
-
-.menu_inicio a:hover {background-position:0px -88px;}
-.menu_programacion a:hover { background-position:-60px -88px;}
-.menu_turistica a:hover {background-position:-208px -88px;}
-.menu_historia a:hover {background-position:-321px -88px;}
-.menu_saladeprensa a:hover {background-position:-436px -88px;}
-.menu_contactenos a:hover {background-position:-547px -88px;}
-.menu_envivo a:hover {background-position:-660px -88px;}
-	
+.barra-menu{
+	margin: 0px
+}	
 
 
 /* HISTORIA */

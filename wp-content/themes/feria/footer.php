@@ -36,9 +36,10 @@
      <li><a class="pilsen" href="#" target="_blank">Pilsen</a></li>
      <li><a class="une" href="#" target="_blank">UNE</a></li>
    </ul>
-
-   <ul style="text-align:center; margin:0 auto; width:300px;">
-    <li><a href="http://www.mincultura.gov.co/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logoprosperidad.jpg" width="207" height="56" /></a></li>
+  <span class="titulo-organizadores">Organizan</span>
+   <ul class="organizadores">
+    <li><a class="mincultura" href="http://www.mincultura.gov.co/" target="_blank">Mincultura</a></li>
+    <li><a class="alcaldia" href="http://www.mincultura.gov.co/" target="_blank">Alcaldia</a></li>
   </ul>
 
 </div> <!-- end #inner-footer -->

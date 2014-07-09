@@ -151,5 +151,9 @@ jQuery(document).ready(function($) {
 			$('#myCarouselHome').css('display', 'none');		
 		}
 	}
+	jQuery('#main_nav').before('<div id="menu-icon">Menu</div>');
+	jQuery("#menu-icon").on("click", function(){
+		jQuery("#main-menu #main_nav").slideToggle();
+	});
 
 }); /* end of as page load scripts */
