@@ -28,7 +28,7 @@ $myQuery = new WP_Query(array(
     $lugar = get_post_meta($post->ID,'lugar',true);
     $telefono = get_post_meta($post->ID,'telefono',true);
     $precio   = get_post_meta($post->ID,'precio',true);
-    $precio   = ( !empty($precio) ? get_post_meta($post->ID,'precio',true) : 'Gratis' ) ;
+    $precio   = ( !empty($precio) )? get_post_meta($post->ID,'precio',true) : 'Gratis' ;
 
     $jornadas = explode(',', $jornada);
     $humanHoraInicio = date("g:i a", strtotime($horaInicio));
@@ -100,7 +100,7 @@ $myQuery = new WP_Query(array(
         $lugar = get_post_meta($post->ID,'lugar',true);
         $telefono = get_post_meta($post->ID,'telefono',true);
         $precio   = get_post_meta($post->ID,'precio',true);
-        $precio   = ( !empty($precio) ? get_post_meta($post->ID,'precio',true) : 'Gratis' ) ;
+        $precio   = ( !empty($precio) )? get_post_meta($post->ID,'precio',true) : 'Gratis' ;
 
         $jornadas = explode(',', $jornada);
         $humanHoraInicio = date("g:i a", strtotime($horaInicio));

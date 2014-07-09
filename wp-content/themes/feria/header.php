@@ -82,6 +82,7 @@
       
       return false;
     });
+
     <?php if(is_category( '3' ) || is_home()): ?>
     $.ajax({
       type: "POST",
@@ -113,9 +114,16 @@
               type: "POST",
               data: "fecha=" + event.day.valueOf() +'/'+ event.month.valueOf() +'/'+ event.year.valueOf(),
               url: "<?php bloginfo('template_directory'); ?>/getEvento.php",
-              success: function(data){     
+              success: function(data){
+
+                $("#container").isotope('destroy');
+                $("#container").isotope({
+                  itemSelector : '.element'
+                });
+
                 $("#container").isotope('remove', $(".element"));          
                 $("#container").isotope('insert', $(data)); 
+
                 $("#loading").css("display","none");
                 //alert(data); 
               }
