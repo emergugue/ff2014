@@ -2269,7 +2269,10 @@ li.previous a:hover:before{
 blockquote.pull-left{
 	padding-right: 15px;
 }
-
+div.destacado.element h2{
+	padding: 10px 65px 10px 10px;
+	background: url(images/destacado.png) #86b8e2 no-repeat right -10px;
+}
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) { 
 
@@ -2457,10 +2460,7 @@ float: none;
 width: 72px;
 clear:both;
  }
-.destacado h2{
-	padding: 10px 65px 10px 10px;
-	background: url(images/destacado.png) #86b8e2 no-repeat right -10px;
-}
+
 }
 @media only screen and (min-width: 768px) {
 	.carousel-caption p{
