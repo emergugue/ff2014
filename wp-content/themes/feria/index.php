@@ -25,20 +25,8 @@ if ($blog_hero){
         <?php echo get_new_royalslider(1); ?>
       </div><!-- cierra .slider -->
       
-        <div class="hoy hidden-phone">
+        <div class="hoy">
         <!-- Titulos -->
-        <div style="display:none">
-        <div class="clearfix row-fluid">
-          <div class="titHoy span8">
-            <span class="icono hidden-phone"></span>
-            <span>Hoy en la feria</span>         
-          </div><!-- cierra .titHoy -->  
-          
-          <div class="span4 titManana hidden-phone">
-              <span>No te pierdas mañana...</span>  
-            </div><!-- cierra .titManana --> 
-        </div>
-         </div>
     <div class="clearfix row-fluid">
         <!-- widget de eventos de hoy en la feria -->
         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar2') ) : 

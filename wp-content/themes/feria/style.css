@@ -2310,6 +2310,9 @@ text-shadow: 0 1px 0 #ffffff;
 	background-size: contain;
 	color: #fff;
 }
+#main_nav{
+	display: none;
+}
 .menu, .menuEn {
 	float:none;
 	width:100%;}
