@@ -34,7 +34,7 @@
             <div class="encabezado span10">
               <h1>Hoy en la Feria</h1>
             </div>
-            <div class="btn-programacion span2">
+            <div class="btn-programacion span2 hidden-phone">
               <span> <a href="/ff2014/programacion/" >Ver todos los eventos </a> </span>
             </div>
           </header>

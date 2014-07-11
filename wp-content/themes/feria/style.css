@@ -45,7 +45,11 @@ ul,li {list-style-type:none;}
 .gallery-caption{
 	
 }
-
+.contenedor-general{
+	background: #fff;
+	-webkit-box-shadow: 0 8px 10px 3px #969696;
+	box-shadow: 0 8px 10px 3px #969696;
+}
 #menu-main li, .navbar .nav {
 	display:block;
 	float:none;
@@ -71,7 +75,7 @@ display: none;
 body{
 	padding-top: 0;
 	margin:0;
-	background: url(images/bg_flores.png) repeat;
+	background: url(images/bg_flores.jpg) repeat;
     color: #777;
   	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   	font-size: 14px;
@@ -84,7 +88,11 @@ body.admin-bar .navbar-fixed-top{
 	top: 28px; 
 }
 
-
+div.container-fluid.nav-container {
+	-webkit-box-shadow: 0 8px 10px 3px #969696;
+	box-shadow: 0 7px 10px 3px #969696;
+	background: #fff;
+}
 
 #inner-header{
 	width: 100%;
@@ -708,8 +716,11 @@ span.hoy {
 	border-radius: 6px;
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
-	width: 93%;
+	width: 100%;
 	font-weight: 700;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .carousel-inner a:hover .element h2{
 	background: #5584aa
@@ -1504,7 +1515,7 @@ footer{
 	background-image:url(images/backFooter.jpg);
 	background-repeat:repeat-x;
 	background-color:#FFF;
-	height:137px;
+	height:auto;
 	width:100%;
 	margin-top:40px;
 	padding:30px 0 0 0;
@@ -2275,14 +2286,20 @@ div.destacado.element h2{
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) { 
-
+.contenedor-general{
+	padding: 0 10px;
+}
 /* header */
-
+.blanco{
+	webkit-box-shadow: 0 8px 10px 3px #969696;
+	box-shadow: 0 7px 10px 3px #969696;
+	background: #fff;
+}
 .navbar .brand {
 background-image: url(images/logoferia.png);
 background-repeat: no-repeat;
-width: 119px;
-height: 116px;
+width: 180px;
+height: 180px;
 float: none;
 display: block;
 padding: 0;
@@ -2389,10 +2406,25 @@ text-shadow: 0 1px 0 #ffffff;
 
 
 .barra-menu{
-	margin: 0px
+	margin: 0px auto;
+	width: 245px;
+	float: none;
 }	
-
-
+#myCarouselHome.carousel {
+padding: 0 40px 0px 40px;
+}
+a.carousel-control {
+	top: 38%;
+}
+.carousel-inner .element h2 {
+	
+}
+.carousel-inner a{
+	height: 220px;
+	display: block;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
 /* HISTORIA */
 
 .category-historia .post {
@@ -2446,10 +2478,28 @@ text-shadow: 0 1px 0 #ffffff;
 footer {
 background-color: #FFF;
 background-image:none;
-height: 200px;
+height: auto;
 width: 100%;
 margin-top: 0px;
 padding: 0px 0 0 0;
+}
+footer li{
+	float: none;
+	display: inline-block;
+}
+.patrocinadores{
+	width: 100%;
+}
+.organizadores{
+	width: 100%;
+}
+.titulo-organizadores, .titulo-patrocinadores{
+	text-align: center;
+}
+.noticiaHome{
+	border-bottom: 3px solid #5584aa;
+	padding: 0 0 10px 0;
+	margin: 0 0 50px 0;
 }
 
 .noticiaHome img {
@@ -2459,9 +2509,9 @@ text-align:center;
 }
 
 .vermas, .readmore {
-float: none;
+float: right;
 width: 72px;
-clear:both;
+clear:initial;
  }
 
 }

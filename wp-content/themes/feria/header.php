@@ -254,4 +254,4 @@ ga('send', 'pageview');
 
 </header> <!-- end header -->
 
-<div class="container-fluid">
+<div class="container-fluid contenedor-general">
