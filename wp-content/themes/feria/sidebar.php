@@ -61,7 +61,7 @@
                          <ul>
 <li><span class="icono1"></span>
  <!-- <a href="<?php echo home_url(); ?>/category/infoturistica/">¿Cómo llegar a Medellín?</a> -->
-    <a href="http://medellin.travel/es/transporte/aerolineas">¿Cómo llegar a Medellín?</a>
+    <a href="http://medellin.travel/es/transporte/aerolineas" target="_blank">¿Cómo llegar a Medellín?</a>
   </li>
 <li><span class="icono2"></span>
   <!-- <a href="http://medellin.travel/que-hacer-en-medellin/reuniones/directorio-turistico/hospedaje" target="_blank">¿Dónde quedarme en Medellín?</a> -->
