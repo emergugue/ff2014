@@ -2554,6 +2554,14 @@ clear:initial;
 	.menu_saladeprensa a:hover {background-position:32px -254px;}
 	.menu_contactenos a:hover {background-position:25px -339px;}
 	.menu_envivo a:hover {background-position:9px -418px;}
+
+	.patrocinadores, .organizadores{
+		width: 90%;
+	}
+	footer li{
+		float: initial;
+		display: inline-block;
+	}
 }
 @media only screen and (min-width: 980px) {
 	body{
