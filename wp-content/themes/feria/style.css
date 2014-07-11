@@ -2449,6 +2449,9 @@ a.carousel-control {
 .calendario {
 	margin-bottom:20px; 
 }
+.calendar TH, .calendar TD, TD.day {
+	width: 36px !important;
+	}
 .EventosDestacados {
 	display:none;
 }
@@ -2528,7 +2531,30 @@ clear:initial;
 		text-align:center;
 	}
 }
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+	#cabezoteAlcaldia {
+		width: 90%;
+		}
+	.menuholder a, .menuholderEn a {
+		padding: 48px 9px 15px 9px;
+		}
+	.menuholder a:hover, .menuholderEn a:hover {
+		padding: 48px 9px 15px 9px;
+		}
+	.menu_programacion a {background-position:33px 0px;}
+	.menu_turistica a {background-position:30px -80px;}
+	.menu_historia a {background-position:10px -164px; }
+	.menu_saladeprensa a {background-position:32px -254px;}
+	.menu_contactenos a {background-position:25px -339px;}
+	.menu_envivo a {background-position:9px -418px;}
 
+	.menu_programacion a:hover {background-position:33px 0px;}
+	.menu_turistica a:hover {background-position:30px -80px;}
+	.menu_historia a:hover {background-position:10px -164px; }
+	.menu_saladeprensa a:hover {background-position:32px -254px;}
+	.menu_contactenos a:hover {background-position:25px -339px;}
+	.menu_envivo a:hover {background-position:9px -418px;}
+}
 @media only screen and (min-width: 980px) {
 	body{
 		padding-top: 0px;
