@@ -27,20 +27,31 @@
 <footer role="contentinfo" >
 
   <div id="inner-footer">
-    <span class="titulo-patrocinadores">Grandes patrocinadoes</span>
+    <span class="titulo-patrocinadores">Grandes patrocinadores:</span>
     <ul class="patrocinadores">
-     <li><a class="cocacola" href="#" target="_blank">Coca Cola</a> </li>
+     <li><a class="cocacola" href="#" target="_blank">Coca Cola</a></li>
      <li><a class="epm" href="#" target="_blank">EPM</a></li>
      <li><a class="fla" href="#" target="_blank">FLA</a></li>
      <li><a class="tigo" href="#" target="_blank">Tigo</a></li>
      <li><a class="pilsen" href="#" target="_blank">Pilsen</a></li>
      <li><a class="une" href="#" target="_blank">UNE</a></li>
+     <li><a class="tm" href="http://www.telemedellin.tv" target="_blank">Telemedellín</a></li>
    </ul>
-  <span class="titulo-organizadores">Organizan</span>
-   <ul class="organizadores">
-    <li><a class="mincultura" href="http://www.mincultura.gov.co/" target="_blank">Mincultura</a></li>
-    <li><a class="alcaldia" href="http://www.mincultura.gov.co/" target="_blank">Alcaldia</a></li>
-  </ul>
+  <div class="row-fluid content-organizadores">
+    <div class="span6">
+      <span class="titulo-apoyan">Apoyan:</span>
+       <ul class="apoyan">
+        <li><a class="mincultura" href="http://www.mincultura.gov.co/" target="_blank">Mincultura</a></li>
+      </ul>
+    </div>
+    <div class="span6">
+      <span class="titulo-organizadores">Organizan:</span>
+       <ul class="organizadores">
+        <li><a class="bureau" href="http://www.medellinconventionbureau.com/" target="_blank">Medellín Convention Bureau</a></li>
+        <li><a class="alcaldia" href="http://www.mincultura.gov.co/" target="_blank">Alcaldia de Medellín</a></li>
+      </ul>
+    </div>
+  </div>
 
 </div> <!-- end #inner-footer -->
 

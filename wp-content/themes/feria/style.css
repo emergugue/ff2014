@@ -99,7 +99,7 @@ div.container-fluid.nav-container {
 }
 
 #cabezoteAlcaldia {
-	width:80%;
+	width:1014px;
 	height:120px;
 	background-color:#FFF;
 	margin:0 auto;
@@ -230,7 +230,10 @@ div.container-fluid.nav-container {
 	float: right;
 	margin-top: -90px;
 }
-.fb-share-button{}
+.fb-share-button{
+	vertical-align: top;
+	margin-right: 4px;
+}
 .g-plus{}
 .twitter-share-button{}
 
@@ -1522,19 +1525,21 @@ footer{
 	}
 .patrocinadores{
 	text-align: center;
-	width: 61%;
+	width: 100%;
 	margin: 15px auto 0 auto;
 	overflow: auto;
-
+}
+#inner-footer span{
+	font-size: 18px;
 }
 .titulo-patrocinadores{
 	display: block;
 	margin: 15px 0 0 0;
 }
-.patrocinadores a{
+.patrocinadores a, .apoyan a, .organizadores a{
 	opacity: 0.7;
 }
-.patrocinadores a:hover{
+.patrocinadores a:hover,  .apoyan a:hover, .organizadores a:hover{
 	opacity: 1.0;
 }
 .cocacola{
@@ -1579,28 +1584,42 @@ footer{
 	display: block;
 	text-indent: -9999px;
 }
-.titulo-organizadores{
+.tm{
+	background: url(images/patrocinadores.jpg) no-repeat -565px 0px;	
+	height: 60px;
+	width: 105px;
+	display: block;
+	text-indent: -9999px;
+}
+.titulo-organizadores, .titulo-apoyan{
 	display: block;
 	clear: both;
 	margin: 15px 0 0 0;
 }
-.organizadores{
+.organizadores, .apoyan{
 	text-align: center;
-	width: 70%;
+	width: 100%;
 	margin: 15px auto 30px auto;
 	overflow: auto;
 }
 .mincultura{
 	background: url(images/patrocinadores.jpg) no-repeat 0px -77px;
-	height: 60px;
-	width: 300px;
+	height: 40px;
+	width: 242px;
 	display: block;
 	text-indent: -9999px;
 }
 .alcaldia{
-	background: url(images/patrocinadores.jpg) no-repeat -300px -77px;
+	background: url(images/patrocinadores.jpg) no-repeat -258px -77px;
 	height: 60px;
-	width: 300px;
+	width: 238px;
+	display: block;
+	text-indent: -9999px;
+}
+.bureau{
+	background: url(images/patrocinadores.jpg) no-repeat -505px -77px;
+	height: 60px;
+	width: 75px;
 	display: block;
 	text-indent: -9999px;
 }
@@ -1649,8 +1668,8 @@ footer{
 
 
 footer li {
-	float:left;
 	padding-right:10px;
+	display: inline-block;
 	}
 
 .navbar-form, .navbar-search {
@@ -2306,7 +2325,9 @@ padding: 0;
 margin: 0px auto;
 text-shadow: 0 1px 0 #ffffff;
 }
-
+#cabezoteAlcaldia{
+	width: 80%;
+}
 #cabezoteAlcaldia .corazon {
 	display:none;
 }
@@ -2500,7 +2521,7 @@ footer li{
 .organizadores{
 	width: 100%;
 }
-.titulo-organizadores, .titulo-patrocinadores{
+.titulo-organizadores, .titulo-patrocinadores, .titulo-apoyan{
 	text-align: center;
 }
 .noticiaHome{
