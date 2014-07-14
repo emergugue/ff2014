@@ -28,7 +28,6 @@ $myQuery = new WP_Query(array(
     $lugar = get_post_meta($post->ID,'lugar',true);
     $telefono = get_post_meta($post->ID,'telefono',true);
     $precio   = get_post_meta($post->ID,'precio',true);
-    $precio   = ( !empty($precio) )? get_post_meta($post->ID,'precio',true) : 'Gratis' ;
 
     $jornadas = explode(',', $jornada);
     $humanHoraInicio = date("g:i a", strtotime($horaInicio));
@@ -65,7 +64,6 @@ $myQuery = new WP_Query(array(
           <i class="icon-time"></i> <strong> Hora:</strong> <?php echo $humanHoraInicio ?> <?php echo ($tieneHoraFin) ? " a $humanHoraFin" : "" ?></li>
           <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> <?php echo $lugar ?></li>
           <li><i class="icon-star"></i> <strong>Teléfono:</strong> <?php echo $telefono ?></li>
-           <li><i class="icon-star"></i> <strong>Precio:</strong> <?php echo $precio ?></li>
         </ul>
       </div>
       </a>
@@ -100,7 +98,6 @@ $myQuery = new WP_Query(array(
         $lugar = get_post_meta($post->ID,'lugar',true);
         $telefono = get_post_meta($post->ID,'telefono',true);
         $precio   = get_post_meta($post->ID,'precio',true);
-        $precio   = ( !empty($precio) )? get_post_meta($post->ID,'precio',true) : 'Gratis' ;
 
         $jornadas = explode(',', $jornada);
         $humanHoraInicio = date("g:i a", strtotime($horaInicio));
@@ -139,7 +136,6 @@ $myQuery = new WP_Query(array(
                     <i class="icon-time"></i> <strong> Hora:</strong> <?php echo $humanHoraInicio ?> <?php echo ($tieneHoraFin) ? " a $humanHoraFin" : "" ?></li>
                     <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> <?php echo $lugar ?></li>
                     <li><i class="icon-star"></i> <strong>Teléfono:</strong> <?php echo $telefono ?></li>
-                     <li><i class="icon-star"></i> <strong>Precio:</strong> <?php echo $precio ?></li>
                   </ul>
                 </div>
                 </a>  

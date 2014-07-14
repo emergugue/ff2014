@@ -2683,3 +2683,7 @@ clear:initial;
 	line-height: 30px;
 }
 
+.calendario h2 .month
+{
+text-transform: capitalize;
+}

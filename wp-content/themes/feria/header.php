@@ -207,10 +207,10 @@ ga('send', 'pageview');
         </div>
       </nav>
       <div class="row-fluid barra-menu">
-            <div class="hitler span4">
+            <div class="sociales span4">
               <div class="fb-share-button" data-type="button"></div>
               <div class="g-plus" data-action="share" data-annotation="none"></div>
-              <a href="https://twitter.com/share" class="twitter-share-button" data-lang="es" data-count="none" data-hashtags="FeriaDeLasFlores">Twittear</a>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-lang="es" data-count="none" data-hashtags="FeriaDeLasFlores" data-via="AlcaldiadeMed">Twittear</a>
             </div>
             <div class="span3 idioma">
               <!-- Widget de idioma -->   
