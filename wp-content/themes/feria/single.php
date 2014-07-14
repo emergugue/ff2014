@@ -26,7 +26,19 @@
                                     <?php the_title(); ?>
                                 </h1>
                             </div>
-                        <?php } ?>
+                            <?php
+                            	// Categoria del viajero.
+                             if( in_category('16') )
+  	                          	{
+  	                          		?>	
+		                             <div class="page-header-date">
+		                                <span itemprop="headline">
+		                                    <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
+		                                </span>
+		                            </div>		
+  	                          		<?php
+                           		} 
+                            }?>
 						
 						</header> <!-- end article header -->
 					

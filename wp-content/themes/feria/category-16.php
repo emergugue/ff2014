@@ -12,7 +12,7 @@
 					<li class="active"><?php single_cat_title(); ?></li> 
 				</ul> <?php endif; ?> <?php } ?> 
 			</div>
-			<div class='travel'>
+			<div class='travel span12'>
 				<?php
 				$args = array('cat'=>'16', 'orderby' => 'date', 'order' => 'ASC') ;
 				$query = new WP_Query( $args );
@@ -30,12 +30,13 @@
 							<section>
 								<p><?php
 								$content = get_the_content();
-								$content = substr(wp_filter_nohtml_kses( $content ), 0,80).'...';
+								$content = substr(wp_filter_nohtml_kses( $content ), 0,100).'...';
 								$content = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]","", $content);
 								echo $content;
 								?>
 							</section>
 							<footer>
+								<figure>  <?php echo get_the_post_thumbnail($page->ID, 'medium'); ?> </figure>
 								<span><a href="<?php the_permalink() ?>" >Ver Más + </a></span>
 							</footer>
 						</article>
