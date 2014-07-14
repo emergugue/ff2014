@@ -22,8 +22,17 @@
       <?php } ?>
     </div>
     <div class="contenido-texto">
+     <?php if(qtrans_getLanguage() == 'es'): ?>
+
       <p>Este año podrás acceder a la programación de la Feria de las Flores mucho más fácil: simplemente selecciona el día y la jornada (mañana, tarde o noche) en la que deseas conocer la programación. </p><p>Los eventos destacados con estrella, son las actividades principales para este año. </p>
       <p>Además, también podrás descargar el PDF con toda la programación oficial de la Feria de las Flores 2014 en el siguiente enlace.</p>
+
+      <?php else: ?>
+
+        <p>Mera vuelta traducir eso </p><p> ... </p>
+
+       <?php endif; ?>
+
     </div>
     <div class="descargarProgramacion"> 
     <a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf" class="btn" target="_blank">

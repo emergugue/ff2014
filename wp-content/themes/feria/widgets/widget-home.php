@@ -34,10 +34,28 @@
         <article id="art-hoy">
           <header class="row-fluid">
             <div class="encabezado span10">
-              <h1>Hoy en la Feria</h1>
+              <?php if(qtrans_getLanguage() == 'es'): ?>
+
+                   <h1>Hoy en la Feria</h1>
+
+              <?php else: ?>
+
+                    <h1>Today</h1>
+
+              <?php endif; ?>  
+             
             </div>
             <div class="btn-programacion span2 hidden-phone">
-              <span> <a href="/ff2014/programacion/" >Ver todos los eventos </a> </span>
+              <?php if(qtrans_getLanguage() == 'es'): ?>
+
+                <span> <a href="/ff2014/programacion/" >Ver todos los eventos </a> </span>
+
+              <?php else: ?>
+
+                <span> <a href="/ff2014/programacion/" >View all events </a> </span>
+
+              <?php endif; ?>
+              
             </div>
           </header>
           <section id="myCarouselHome" class="carousel slide">

@@ -232,7 +232,16 @@ ga('send', 'pageview');
                 </fieldset>
               </form>
                 <?php else: ?>
-                <?php get_search_form( $echo ); ?>
+                <form action="<?php echo home_url(); ?>" method="get" class="form-stacked">
+                  <fieldset>
+                    <div class="clearfix">
+                      <div class="input-append input-prepend">
+                        <span class="add-on"><i class="icon-search"></i></span><input type="text" name="s" id="search" placeholder="Buscar" value="" class="placeholder"><button type="submit" class="btn btn-primary">Search</button>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+                <?php //get_search_form( $echo ); ?>
               <?php endif; ?>
             </div>
           </div>

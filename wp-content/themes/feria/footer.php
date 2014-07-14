@@ -27,7 +27,11 @@
 <footer role="contentinfo" >
 
   <div id="inner-footer">
-    <span class="titulo-patrocinadores">Grandes patrocinadores:</span>
+  <?php if(qtrans_getLanguage() == 'es'): ?>
+      <span class="titulo-patrocinadores">Grandes patrocinadores:</span>
+    <?php else: ?>
+     <span class="titulo-patrocinadores">Big patrocinators :</span>
+  <?php endif; ?>
     <ul class="patrocinadores">
      <li><a class="cocacola" href="#" target="_blank">Coca Cola</a></li>
      <li><a class="epm" href="#" target="_blank">EPM</a></li>
@@ -39,13 +43,25 @@
    </ul>
   <div class="row-fluid content-organizadores">
     <div class="span6">
-      <span class="titulo-apoyan">Apoyan:</span>
+      <?php if(qtrans_getLanguage() == 'es'): ?>
+        <span class="titulo-apoyan">Sponsors:</span>
+      <?php else: ?>
+        <span class="titulo-apoyan">Sponsors:</span>
+    <?php endif; ?>
        <ul class="apoyan">
         <li><a class="mincultura" href="http://www.mincultura.gov.co/" target="_blank">Mincultura</a></li>
       </ul>
     </div>
     <div class="span6">
-      <span class="titulo-organizadores">Organizan:</span>
+      <?php if(qtrans_getLanguage() == 'es'): ?>
+
+          <span class="titulo-organizadores">Organizan:</span>
+
+      <?php else: ?>
+
+         <span class="titulo-organizadores">Organizers :</span>
+
+       <?php endif; ?>
        <ul class="organizadores">
         <li><a class="bureau" href="http://www.medellinconventionbureau.com/" target="_blank">Medellín Convention Bureau</a></li>
         <li><a class="alcaldia" href="http://www.mincultura.gov.co/" target="_blank">Alcaldia de Medellín</a></li>
