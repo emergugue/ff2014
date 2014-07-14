@@ -4,11 +4,13 @@
    {
   
 	  private $hoy;
+    private $hoyff;
 	  private $manana;
   
 	  function WidgetHome(){
-		  $this->hoy = strtotime(date('d/m/Y'));
-		  $this->manana = strtotime(date('d/m/Y').' +1 day');
+		  $this->hoy    =   date('d/m/Y');
+      $this->hoyff  =   strtotime(date('d-m-Y')) ;
+		  $this->manana =   date('d/m/Y').' +1 day';
 		  parent::__construct( false, 'Widget Home', array('description'=>'Este widget muestra los eventos de la feria del día.'));
 	  }
   
@@ -66,9 +68,10 @@
 
                   //$post_thumbnail     = (!empty($get_post_t ) ) ? get_the_post_thumbnail($page->ID, 'thumbnail')  : '<img height="150" src="'.get_template_directory_uri().'/images/tumb-generico.jpg'.'" >' ;
                   $fechaInicio       = get_post_meta(get_the_ID(),'fecha_inicio',true);
+                  $fechaInicio       = str_replace('/', '-', $fechaInicio);
                   $fechaInicio       = strtotime($fechaInicio);
                   $fechaFin          = get_post_meta($post->ID,'fecha_fin',true);
-                  $fechaFin          = strtotime($fechaFin);
+                  $fechaFin          = strtotime($fechaFin) ;
 
                   $horaInicio        = get_post_meta(get_the_ID(),'hora_inicio',true);
                   $horaFin           = get_post_meta(get_the_ID(),'hora_fin',true);
@@ -76,7 +79,7 @@
                   $lugar             = get_post_meta(get_the_ID(),'lugar',true);
                   $telefono          = get_post_meta(get_the_ID(),'telefono',true);
 
-                  if( $fechaInicio == $this->hoy ): 
+                  if( $fechaInicio == $this->hoyff ): 
                       ?>
                     <?php 
                      $i = ( $i + 1 );
@@ -133,17 +136,16 @@
 
                   //$post_thumbnail     = (!empty($get_post_t ) ) ? get_the_post_thumbnail($page->ID, 'thumbnail')  : '<img height="150" src="'.get_template_directory_uri().'/images/tumb-generico.jpg'.'" >' ;
                   $fechaInicio       = get_post_meta(get_the_ID(),'fecha_inicio',true);
+                  $fechaInicio       = str_replace('/', '-', $fechaInicio);
                   $fechaInicio       = strtotime($fechaInicio);
-                  $fechaFin          = get_post_meta($post->ID,'fecha_fin',true);
-                  $fechaFin          = strtotime($fechaFin);
 
                   $horaInicio        = get_post_meta(get_the_ID(),'hora_inicio',true);
                   $horaFin           = get_post_meta(get_the_ID(),'hora_fin',true);
                   $jornada           = get_post_meta(get_the_ID(),'jornada',true);
                   $lugar             = get_post_meta(get_the_ID(),'lugar',true);
                   $telefono          = get_post_meta(get_the_ID(),'telefono',true);
-
-                  if( $fechaInicio == $this->hoy ): 
+                    
+                  if( $fechaInicio === $this->hoyff ): 
                       ?>
                     <?php 
                      $i = ( $i + 1 );
