@@ -30,7 +30,7 @@
   <?php if(qtrans_getLanguage() == 'es'): ?>
       <span class="titulo-patrocinadores">Grandes patrocinadores:</span>
     <?php else: ?>
-     <span class="titulo-patrocinadores">Big patrocinators :</span>
+     <span class="titulo-patrocinadores">Big sponsors:</span>
   <?php endif; ?>
     <ul class="patrocinadores">
      <li><a class="cocacola" href="#" target="_blank">Coca Cola</a></li>
@@ -44,9 +44,9 @@
   <div class="row-fluid content-organizadores">
     <div class="span6">
       <?php if(qtrans_getLanguage() == 'es'): ?>
-        <span class="titulo-apoyan">Sponsors:</span>
+        <span class="titulo-apoyan">Apoyan:</span>
       <?php else: ?>
-        <span class="titulo-apoyan">Sponsors:</span>
+        <span class="titulo-apoyan">Support:</span>
     <?php endif; ?>
        <ul class="apoyan">
         <li><a class="mincultura" href="http://www.mincultura.gov.co/" target="_blank">Mincultura</a></li>
