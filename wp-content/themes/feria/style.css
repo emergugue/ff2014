@@ -232,7 +232,6 @@ div.container-fluid.nav-container {
 }
 .fb-share-button{
 	vertical-align: top;
-	margin-right: 4px;
 }
 .g-plus{}
 .twitter-share-button{}
@@ -1511,6 +1510,17 @@ input, textarea, select, .uneditable-input {
 
 .calendar{
 	width: 100%;
+}
+
+/*Viajero de la Feria*/
+.travel h2{
+	margin-bottom: 0px;
+}
+.travel .header-der{
+	margin-bottom: 30px;
+	text-align: right;
+	font-size: 0.9em;
+	color: #AFAFB0;
 }
 
 /* FOOTER */
