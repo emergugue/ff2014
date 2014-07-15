@@ -156,4 +156,17 @@ jQuery(document).ready(function($) {
 		jQuery("#main-menu #main_nav").slideToggle();
 	});
 
+	if( $('.calendario').length )
+	{
+		$('.day').click(function(){
+			if( $('.daySelected').length )
+			{
+				$('.daySelected').removeClass('daySelected');	
+			}
+			$(this).removeClass('day');
+			$(this).addClass('daySelected');
+		});
+	}
+
+
 }); /* end of as page load scripts */
