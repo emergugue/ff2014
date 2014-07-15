@@ -37,7 +37,7 @@
 							</section>
 							<footer>
 								<figure>  <?php echo get_the_post_thumbnail($page->ID, 'medium'); ?> </figure>
-								<span><a href="<?php the_permalink() ?>" >Ver Más + </a></span>
+								<div class="vermas"><a href="<?php the_permalink() ?>" >Ver Más + </a></div>
 							</footer>
 						</article>
 					<?php

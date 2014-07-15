@@ -83,10 +83,10 @@
 }
 
 TD.daySelected {
-     background-color:#FF5170;
-     outline: 0 none;
-     cursor: pointer;
-     color: #FFFFFF;
+     background-color:#FF5170 !important;
+     outline: 0 none !important;
+     cursor: pointer !important;
+     color: #FFFFFF !important;
 }
 
 .calendar TD.day:hover{

@@ -271,7 +271,7 @@
                                 month: month,
                                 year: year,
                             });
-                        }else if(target.is('.holiday')){
+                        } else if(target.is('.holiday')){
                             var day = parseInt(target.attr('day'), 10)||1;
                             var month = parseInt(target.attr('month'), 10)||1;
                             var year = parseInt(target.attr('year'), 10)||1;
@@ -297,10 +297,11 @@
                         break;
                     case 'th':
                         if (target.is('.sel')){
+                            var nnnnn = new Date();
                             switch(target.attr("id")){
                                 case 'last':
                                     this.update_date('prv');
-                                    var prv = new Date(this.yp, this.mm, 1);
+                                    var prv = new Date(this.yp, this.mm, nnnnn.getDate());
                                     this.live_date = prv;
                                     this.renderCalendar(prv, this.events);
                                     this.element.trigger({
@@ -318,7 +319,7 @@
                                     break;
                                 case 'next':
                                     this.update_date('nxt');
-                                    var nxt = new Date(this.yn, this.mm, 1);
+                                    var nxt = new Date(this.yn, this.mm, nnnnn.getDate());
                                     this.live_date = nxt;
                                     this.renderCalendar(nxt, this.events);
                                     this.element.trigger({

@@ -123,19 +123,22 @@ jQuery(document).ready(function($){
 
         $("#container").isotope('remove', $(".element"));          
         $("#container").isotope('insert', $(data)); 
-
         $("#loading").css("display","none");
-                //alert(data); 
-              }
-            });
+      }
+    });
+    if( $('.daySelected').length )
+    {
+      $('.daySelected').removeClass('daySelected'); 
+    }
 
-            //alert(event.day.valueOf() +'/'+ event.month.valueOf() +'/'+ event.year.valueOf() ); 
-          })
+    $('#day_'+event.day.valueOf()).addClass('daySelected');
+          //alert(event.day.valueOf() +'/'+ event.month.valueOf() +'/'+ event.year.valueOf() ); 
+  })
   .on('onEvent', function(event){ alert(event.day.valueOf() +'-'+ event.month.valueOf() +'-'+ event.year.valueOf() ); })
   .on('onNext', function(event){  })
   .on('onPrev', function(event){  })
   .on('onCurrent', function(event){ 
-    $("#container").html(event.day.valueOf() +'/'+ event.month.valueOf() +'/'+ event.year.valueOf());
+    //$("#container").html(event.day.valueOf() +'/'+ event.month.valueOf() +'/'+ event.year.valueOf());
   });
 });
 </script>
