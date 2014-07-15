@@ -82,6 +82,13 @@
  
 }
 
+TD.daySelected {
+     background-color:#FF5170;
+     outline: 0 none;
+     cursor: pointer;
+     color: #FFFFFF;
+}
+
 .calendar TD.day:hover{
      
      background-color:#FF5170;
@@ -89,6 +96,8 @@
      cursor: pointer;
      color: #FFFFFF;
 }
+
+
 
 .calendar TD.weekend {
      color: rgba(0, 0, 0, 0.3);
