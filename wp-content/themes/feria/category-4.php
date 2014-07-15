@@ -52,10 +52,31 @@
     <div>
       <section id="options" class="clearfix">
         <ul id="filters" class="option-set clearfix" data-option-key="filter">
-          <li class="span3"><a href="#filter" data-option-value="*" class="selected">Todos</a></li>
-          <li class="span3"><a href="#filter" data-option-value=".manana">Mañana</a></li>
-          <li class="span3"><a href="#filter" data-option-value=".tarde">Tarde</a></li>
-          <li class="span3"><a href="#filter" data-option-value=".noche">Noche</a></li>
+          <li class="span3"><a href="#filter" data-option-value="*" class="selected">
+          <?php if(qtrans_getLanguage() == 'es'): ?>
+              Todos
+           <?php else: ?>
+              All
+          <?php endif; ?>
+            </a></li>
+          <li class="span3"><a href="#filter" data-option-value=".manana"> <?php if(qtrans_getLanguage() == 'es'): ?>
+              Mañana
+           <?php else: ?>
+              Morning
+          <?php endif; ?>
+            </a></li>
+          <li class="span3"><a href="#filter" data-option-value=".tarde"> <?php if(qtrans_getLanguage() == 'es'): ?>
+              Tarde
+           <?php else: ?>
+              Afternoon
+          <?php endif; ?>
+            </a></li>
+          <li class="span3"><a href="#filter" data-option-value=".noche"> <?php if(qtrans_getLanguage() == 'es'): ?>
+              Noche
+           <?php else: ?>
+              Night
+          <?php endif; ?>
+            </a></li>
         </ul>
       </section>
       <!-- #options -->
