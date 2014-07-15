@@ -169,7 +169,7 @@
 
 
   <div class="span6 galeriaFeriaD"> <!-- Galería de Medellín -->
-    <iframe src="https://www.flickr.com/photos/alcaldiademed/9477118921/in/set-72157634919666530/player/" width="240" height="168" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+    <iframe src="https://www.flickr.com/photos/alcaldiademed/11885064474/in/set-72157639647576673/player/" width="307" height="182" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
     <span class="descarga"><a href="https://www.flickr.com/photos/alcaldiademed/sets/72157639647576673/" target="_blank"><?php if(qtrans_getLanguage() == 'es'): ?>Ver galería: Imágenes de Medellín<?php else: ?>Gallery: Pictures of Medellín<?php endif; ?></a></span>
   </div>
 
