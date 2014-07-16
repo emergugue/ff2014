@@ -223,6 +223,15 @@ div.container-fluid.nav-container {
 .menu_contactenos a:hover {background-position:37px -339px;}
 .menu_envivo a:hover {background-position:23px -418px;}
 
+
+/*Menu icon para inglés*/
+.menuholderEn .menu_programacion a {background-position:30px 0px;}
+.menuholderEn .menu_turistica a {background-position:34px -80px;}
+.menuholderEn .menu_historia a {background-position:21px -164px; }
+.menuholderEn .menu_saladeprensa a {background-position:38px -254px;}
+.menuholderEn .menu_contactenos a {background-position:32px -339px;}
+.menuholderEn .menu_envivo a {background-position:43px -418px;}
+
 .barra-menu{
 	clear: both;
 	padding-top: 20px;
