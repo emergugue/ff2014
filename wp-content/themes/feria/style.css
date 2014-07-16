@@ -209,19 +209,19 @@ div.container-fluid.nav-container {
  
 
 /*ESTADO NORMAL*/
-.menu_programacion a {background-position:47px 0px;}
-.menu_turistica a {background-position:47px -80px;}
-.menu_historia a {background-position:27px -164px; }
-.menu_saladeprensa a {background-position:53px -254px;}
-.menu_contactenos a {background-position:45px -339px;}
-.menu_envivo a {background-position:27px -418px;}
+.menu_programacion a {background-position:43px 0px;}
+.menu_turistica a {background-position:39px -80px;}
+.menu_historia a {background-position:21px -164px; }
+.menu_saladeprensa a {background-position:45px -254px;}
+.menu_contactenos a {background-position:37px -339px;}
+.menu_envivo a {background-position:23px -418px;}
 
-.menu_programacion a:hover {background-position:47px 0px;}
-.menu_turistica a:hover {background-position:47px -80px;}
-.menu_historia a:hover {background-position:27px -164px; }
-.menu_saladeprensa a:hover {background-position:53px -254px;}
-.menu_contactenos a:hover {background-position:45px -339px;}
-.menu_envivo a:hover {background-position:27px -418px;}
+.menu_programacion a:hover {background-position:43px 0px;}
+.menu_turistica a:hover {background-position:39px -80px;}
+.menu_historia a:hover {background-position:21px -164px; }
+.menu_saladeprensa a:hover {background-position:45px -254px;}
+.menu_contactenos a:hover {background-position:37px -339px;}
+.menu_envivo a:hover {background-position:23px -418px;}
 
 .barra-menu{
 	clear: both;
