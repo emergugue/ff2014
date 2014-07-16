@@ -115,15 +115,24 @@ jQuery(document).ready(function($){
       data: "fecha=" + event.day.valueOf() +'/'+ event.month.valueOf() +'/'+ event.year.valueOf(),
       url: "<?php bloginfo('template_directory'); ?>/getEvento.php",
       success: function(data){
-
-        $("#container").isotope('destroy');
-        $("#container").isotope({
-          itemSelector : '.element'
-        });
-
-        $("#container").isotope('remove', $(".element"));          
-        $("#container").isotope('insert', $(data)); 
+        var container = $("#container");
+        container.isotope('destroy');
         $("#loading").css("display","none");
+
+        if( data.trim()  > 0)
+        {
+            container.isotope({
+              itemSelector : '.element'
+            });
+
+            container.isotope('remove', $(".element"));          
+            container.isotope('insert', $(data)); 
+                      
+        }else
+        {
+          container.text('No se encontraron eventos para este día');
+        }
+
       }
     });
     if( $('.daySelected').length )

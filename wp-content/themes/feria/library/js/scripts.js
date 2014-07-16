@@ -135,7 +135,7 @@ jQuery(document).ready(function($) {
     		$.each(data.result.files, function (index, file) {
 
     			target3.attr('src',target3.attr('src')+file.name);
-    			console.log( file );
+    			
     		});
     	},
     	progressall: function (e, data) {
