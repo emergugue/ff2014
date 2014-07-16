@@ -29,7 +29,9 @@
 
       <?php else: ?>
 
-        <p>Mera vuelta traducir eso </p><p> ... </p>
+        <p>This year you can access programming Flower Fair much easier: just choose the day and time (morning, afternoon or evening) where you want to see the schedule.</p>
+        <p>The event featured with a medal, are the main activities for this year. </p>
+        <p>In addition, you can also download the PDF with all the official program of the 2014 Fair Flowers on the link below.</p>
 
        <?php endif; ?>
 
