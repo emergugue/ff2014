@@ -22,9 +22,9 @@
 
 <span class="prensa">
  <?php if(qtrans_getLanguage() == 'es'): ?>
- <a href="<?php echo home_url(); ?>/acreditacion-de-prensa-para-la-feria-de-las-flores-2013/">Si quieres acreditarte como periodista, haz clic aquí</a>
+ <a href="<?php echo home_url(); ?>/saladeprensa/acreditacion-de-prensa-para-la-feria-de-las-flores-2014/">Si quieres acreditarte como periodista, haz clic aquí</a>
 <?php else: ?>
-  <a href="<?php echo home_url(); ?>/acreditacion-de-prensa-para-la-feria-de-las-flores-2013/">
+  <a href="<?php echo home_url(); ?>/saladeprensa/acreditacion-de-prensa-para-la-feria-de-las-flores-2014/">
     If you are a journalist, please click here.
   </a>
 <?php endif; ?> 
