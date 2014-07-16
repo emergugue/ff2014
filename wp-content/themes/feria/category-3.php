@@ -175,7 +175,7 @@
 
 
 
-  <div class="span6 logoDescarga">
+  <div class="span6 logoDescarga"> <!-- Progrmación -->
     <span class="descarga"><a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf"><?php if(qtrans_getLanguage() == 'es'): ?>Descargar programación<?php else: ?>Download Schedule<?php endif; ?></a></span>
   </div>
 
