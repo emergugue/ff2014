@@ -199,10 +199,10 @@ ga('send', 'pageview');
           <?php else: ?>
           <ul class="menuEn menuholderEn"> 
             <!-- <li class="menu_inicio"><a href="<?php echo home_url(); ?>/en/" title="Inicio" class="active">Inicio</a></li> -->
-            <li class="menu_programacion"><a href="<?php echo home_url(); ?>/en/category/programacion/" title="Programación">Schedule</a></li>
+            <li class="menu_programacion"><a href="<?php echo home_url(); ?>/en/programacion/" title="Programación">Schedule</a></li>
             <li class="menu_turistica"><a href="<?php echo home_url(); ?>/en/category/infoturistica/" title="Info Turística">Four Turist</a></li>
-            <li class="menu_historia"><a href="<?php echo home_url(); ?>/en/category/historia/" title="Historia">History</a></li>
-            <li class="menu_saladeprensa"><a href="<?php echo home_url(); ?>/en/category/saladeprensa/" title="Sala de Prensa">Press Room</a></li>
+            <li class="menu_historia"><a href="<?php echo home_url(); ?>/en/historia/" title="Historia">History</a></li>
+            <li class="menu_saladeprensa"><a href="<?php echo home_url(); ?>/en/saladeprensa/" title="Sala de Prensa">Press Room</a></li>
             <li class="menu_contactenos"><a href="<?php echo home_url(); ?>/en/contacto/" title="Contact us">Contact us</a></li>
             <li class="menu_envivo"><a href="<?php echo home_url(); ?>/en/la-feria-en-vivo/" title="En Vivo">La Feria Live</a></li>
           </ul>
