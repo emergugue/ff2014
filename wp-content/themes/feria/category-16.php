@@ -22,9 +22,9 @@
 					?>
 						<article id="post-<?php echo get_the_ID(); ?>" class='bit' >
 							<header>
-								<div class='header-izq'><h2><?php the_title(); ?></h2></div>
+								<div class='header-izq'><h2><?php echo get_the_title(); ?></h2></div>
 								<div class='header-der'>
-									<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
+									<time datetime="<?php echo get_the_time('Y-m-j'); ?>" pubdate><?php echo get_the_time('j'); echo " de "; echo get_the_time('F'); echo " del "; echo get_the_time('Y'); ?></time>
 								</div>
 							</header>
 							<section>

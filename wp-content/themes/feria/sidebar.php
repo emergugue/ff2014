@@ -10,7 +10,7 @@
                       
 
                             
-							<div class="videoFeria">
+				<!--			<div class="videoFeria">
                             <div class="tit">
                                  <span class="icono"></span>
                                  <?php if(qtrans_getLanguage() == 'es'): ?>
@@ -18,10 +18,9 @@
                                  <?php else: ?>
                                  <span>Festival's video</span>  
                                   <?php endif; ?>      
-                            </div><!-- cierra .tit -->  
-                            
-                            <!-- <iframe width="300" height="169" src="//www.youtube.com/embed/aam3ce4gpfM" frameborder="0" allowfullscreen></iframe> -->
-                         </div><!-- cierra .videoFeria -->	
+                            </div>                
+                             <iframe width="300" height="169" src="//www.youtube.com/embed/aam3ce4gpfM" frameborder="0" allowfullscreen></iframe>
+                         </div>-->	
 					
 					<?php } else {?>
                     
