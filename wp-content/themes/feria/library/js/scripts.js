@@ -125,12 +125,17 @@ jQuery(document).ready(function($) {
   	'use strict';
     var url = window.location.hostname === 'blueimp.github.io' ?
     '//jquery-file-upload.appspot.com/' : '/ff2014/wp-content/plugins/avatar-fiesta/server/php/';
+
+    var target3 = $('#target3'); 
+
     $('#fileupload').fileupload({
     	url: url,
     	dataType: 'json',
     	done: function (e, data) {
     		$.each(data.result.files, function (index, file) {
-    			$('<p/>').text(file.name).appendTo('#files');
+
+    			target3.attr('src',target3.attr('src')+file.name);
+    			console.log( file );
     		});
     	},
     	progressall: function (e, data) {

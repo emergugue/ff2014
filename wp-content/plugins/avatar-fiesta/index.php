@@ -43,17 +43,17 @@ if( isset($_FILES['imguser'] ) )
     </div>
     <div class="span12">
         <span><h1>1. Sube tu Selfie </h1></span>
-        <div class="selfie-info">
-            <p>Recuerda que tu selfie debe cumplir con normas minimas para ser subido</p>
-            <p>Tu selfie no podra tener contenidos explicitos de sexo y/o violencia</p>
-            <p>Tu selfie no podra hacer alusion a compañias, marcas y/o movimientos politicos. Aunque 
+        <div class="selfie-info span11">
+            <p>Recuerda que tu selfie debe cumplir con normas minimas para ser subido
+                Tu selfie no podra tener contenidos explicitos de sexo y/o violencia
+                Tu selfie no podra hacer alusion a compañias, marcas y/o movimientos politicos. Aunque 
                 paradojicamente te llenaremos el marco hasta el cuello, en publicidad de la alcaldia
-                y la gobernacion .</p>
-            <p>Los sefies que incumplan con estas reglas seran borrados del sitio oficial de la feria.</p>
-            <p> todo billete falso se rompe</p>
+                y la gobernacion .
+                Los sefies que incumplan con estas reglas seran borrados del sitio oficial de la feria.</p>
+                todo billete falso se rompe</p>
         </div>
     </div>
-    <div id="avatar" class="span12">
+    <div id="avatar" class="span11">
         <div class="img-user"> 
             <img id="target3" class="crop_me" alt=""  src="<?php echo WP_CONTENT_URL.'/uploads/temporales/'.$name_token ?>" >
         </div>
@@ -63,7 +63,7 @@ if( isset($_FILES['imguser'] ) )
         </div>-->
         <?php } ?>
     </div>
-    <div id="selfie-form" class="span12">
+    <div id="selfie-form" class="span11">
         <?php
            if ( $valid ) :
         ?>
@@ -79,7 +79,7 @@ if( isset($_FILES['imguser'] ) )
            </form> 
         </div> -->
         <?php endif ; ?>
-        <div class="sube" class="span12">
+        <div class="sube" class="span11">
             <h2><?php if(!$valid) 
                         { 
                             echo 'Tomar Sefie';

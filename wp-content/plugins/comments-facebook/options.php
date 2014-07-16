@@ -18,11 +18,6 @@
 </tr>
 
 <tr valign="top">
-<th scape="row">App Width (px):</th>
-  <td><input type="text" name="app_width" value="<?php echo get_option('app_width'); ?>" /></td>
-</tr>
-
-<tr valign="top">
 <th scape="row">App Language (P. Ej. es_ES, en_US, etc.):</th>
   <td><input type="text" name="app_language" value="<?php echo get_option('app_language'); ?>" /></td>
 </tr>
