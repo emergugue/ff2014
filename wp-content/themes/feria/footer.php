@@ -39,7 +39,7 @@
      <li><a class="tigo" href="http://www.tigo.com.co/" target="_blank">Tigo</a></li>
      <li><a class="pilsen" href="http://www.pilsen.com.co/" target="_blank">Pilsen</a></li>
      <li><a class="une" href="http://www.une.com.co/" target="_blank">UNE</a></li>
-     <li><a class="thttp://telemedellin.tv/" href="http://www.telemedellin.tv" target="_blank">Telemedellín</a></li>
+     <li><a class="tm" href="http://telemedellin.tv/" href="http://www.telemedellin.tv" target="_blank">Telemedellín</a></li>
    </ul>
   <div class="row-fluid content-organizadores">
     <div class="span6">
