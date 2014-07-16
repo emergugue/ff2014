@@ -119,7 +119,7 @@ jQuery(document).ready(function($){
         container.isotope('destroy');
         $("#loading").css("display","none");
 
-        if( data.trim()  > 0)
+        if( data.trim().length > 0)
         {
             container.isotope({
               itemSelector : '.element'
