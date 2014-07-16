@@ -164,37 +164,34 @@
 </div><!-- cierra row -->
 
 <div class="clearfix row-fluid">
-
-
-
-
   <div class="span6 galeriaFeriaD"> <!-- Galería de Medellín -->
     <iframe src="https://www.flickr.com/photos/alcaldiademed/11885064474/in/set-72157639647576673/player/" width="307" height="182" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
     <span class="descarga"><a href="https://www.flickr.com/photos/alcaldiademed/sets/72157639647576673/" target="_blank"><?php if(qtrans_getLanguage() == 'es'): ?>Ver galería: Imágenes de Medellín<?php else: ?>Gallery: Pictures of Medellín<?php endif; ?></a></span>
   </div>
-
-
-
   <div class="span6 logoDescarga"> <!-- Progrmación -->
     <span class="descarga"><a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf"><?php if(qtrans_getLanguage() == 'es'): ?>Descargar programación<?php else: ?>Download Schedule<?php endif; ?></a></span>
   </div>
-
 </div><!-- cierra row -->
+
+<div class="clearfix row-fluid">
+  <div class="span6 logoDescarga">
+    <span class="descarga"><a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion_hd.pdf"><?php if(qtrans_getLanguage() == 'es'): ?>Descargar programación HD<?php else: ?>Download Schedule HD<?php endif; ?></a></span>
+  </div>
+</div><!-- cierra row -->
+
 
 <div class="clearfix row-fluid" style="display:none;">
- <div class="span6 videoFeria">
-  <iframe width="307" height="182" src="//www.youtube.com/embed/bQ2KKHzR2DA" frameborder="0" allowfullscreen></iframe>
-  <span class="descarga"><a href="#">Descargar video</a></span> 
-</div>
+   <div class="span6 videoFeria">
+    <iframe width="307" height="182" src="//www.youtube.com/embed/bQ2KKHzR2DA" frameborder="0" allowfullscreen></iframe>
+    <span class="descarga"><a href="#">Descargar video</a></span> 
+  </div>
 
 
-<div class="span6 logoDescarga">
-  <span class="descarga"><a href="#">Descargar cuña</a></span>
-</div>
-
-
-
+  <div class="span6 logoDescarga">
+    <span class="descarga"><a href="#">Descargar cuña</a></span>
+  </div>
 </div><!-- cierra row -->
+
 </div><!-- cierra .kitdeprensa -->
 </div>
 

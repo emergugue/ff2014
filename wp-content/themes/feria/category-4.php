@@ -35,12 +35,20 @@
 
     </div>
     <div class="descargarProgramacion"> 
-    <a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf" class="btn" target="_blank">
-    <?php if(qtrans_getLanguage() == 'es'): ?>Descarga aquí la programación completa en PDF
-    <?php else: ?>Download PDF schedule here
-    <?php endif; ?>
-    
-    </a> &nbsp; &nbsp; 
+      <div class="low">
+        <a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf" class="btn" target="_blank">
+        <?php if(qtrans_getLanguage() == 'es'): ?>Descarga aquí la programación completa en PDF (Calidad baja)
+        <?php else: ?>Download PDF schedule here (Low quality)
+        <?php endif; ?>
+        </a>
+      </div>
+      <div class="hd">
+        <a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion_hd.pdf" class="btn" target="_blank">
+        <?php if(qtrans_getLanguage() == 'es'): ?>Descarga aquí la programación completa en PDF (Calidad alta)
+        <?php else: ?>Download PDF schedule here ( Full HD )
+        <?php endif; ?>
+        </a>
+      </div>
     </div>
     <!-- cierra .descargarProgramacion --> 
     

@@ -3,7 +3,7 @@
 Plugin Name: Comments Facebook
 Plugin URI: http://bumbablog.com/
 Description: Este plugin mostrará el formulario de comentarios de facebook en tus post y pages. Contribuye con tu SEO. No más comentarios spam.
-Version: 1.11
+Version: 1.51
 Author: Demo BUMBABlog
 Author URI: http://bumbablog.com/
 */
@@ -20,23 +20,13 @@ if (!defined('WP_PLUGIN_DIR'))
 function activate_commentsfacebook() {
   add_option('web_app_title', 'Comments');	
   add_option('web_app_id', '150278208448155');
-  add_option('app_width', '600');
   add_option('app_language', 'es_ES');
   add_option('app_post', '2');
-}
-
-function deactive_commentsfacebook() {
-  delete_option('web_app_title');
-  delete_option('web_app_id');
-  delete_option('app_width');
-  delete_option('app_language');
-  delete_option('app_post');
 }
 
 function admin_init_commentsfacebook() {
   register_setting('commentsfacebook', 'web_app_title');
   register_setting('commentsfacebook', 'web_app_id');
-  register_setting('commentsfacebook', 'app_width');
   register_setting('commentsfacebook', 'app_language');
   register_setting('commentsfacebook', 'app_post');
 }
@@ -49,16 +39,12 @@ function options_page_commentsfacebook() {
   include(WP_PLUGIN_DIR.'/comments-facebook/options.php');  
 }
 
-function commentsfacebook() { 
-  
+function declarevarcom(){
   $web_app_title = get_option('web_app_title');
   $web_app_id = get_option('web_app_id');
-  $app_width = get_option('app_width');
   $app_language = get_option('app_language');
   $app_post = get_option('app_post');
-  
-  
-  ?>
+?>
   
   <div id="fb-root"></div>
   
@@ -69,17 +55,35 @@ function commentsfacebook() {
   		js.src = "//connect.facebook.net/<?php echo $app_language ?>/sdk.js#xfbml=1&appId=<?php echo $web_app_id ?>&version=v2.0";
   		fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
-	
-   <div style="margin-top: 30px;"><h3><?php echo $web_app_title ?></h3></div>
-             
-   <center><div class="fb-comments" data-href="<?php the_permalink() ?>" data-num-posts="<?php echo $app_post ?>" data-width="<?php echo $app_width ?>" data-colorscheme="light"></div></center>
     
-  <?php
+    <style>
+	#fbcomments, .fb-comments, .fb-comments iframe[style], .fb-comments span {
+		width: 100% !important;
+	}
+	</style>
+<?php
+}
 
+function commentsfacebook() { 
+  
+  $web_app_title = get_option('web_app_title');
+  $web_app_id = get_option('web_app_id');
+  $app_language = get_option('app_language');
+  $app_post = get_option('app_post');
+  
+  $url_base_com = get_permalink();
+   ?>
+    
+   <div style="margin: 30px 0px 30px 0px;"><h2><?php echo $web_app_title ?></h2></div>
+             
+   <div class="fb-comments" data-href="<?php echo $url_base_com; ?>" data-num-posts="<?php echo $app_post ?>" data-colorscheme="light" data-width="100%"></div>
+   
+   <script>FB.XFBML.parse();</script>
+  <?php
+  
 }
 
 register_activation_hook(__FILE__, 'activate_commentsfacebook');
-register_deactivation_hook(__FILE__, 'deactive_commentsfacebook');
 
 if (is_admin()) {
   add_action('admin_init', 'admin_init_commentsfacebook');
@@ -87,6 +91,7 @@ if (is_admin()) {
 }
 
 if (!is_admin()) {
+	add_action('wp_head', 'declarevarcom');
 	add_action('comments_template', 'commentsfacebook');
 }
 
