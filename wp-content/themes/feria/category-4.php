@@ -36,17 +36,17 @@
        <?php endif; ?>
 
     </div>
-    <div class="descargarProgramacion"> 
-      <div class="low">
+    <div class="descargarProgramacion row-fluid"> 
+      <div class="low span6">
         <a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf" class="btn" target="_blank">
-        <?php if(qtrans_getLanguage() == 'es'): ?>Descarga aquí la programación completa en PDF (Calidad baja)
+        <?php if(qtrans_getLanguage() == 'es'): ?>Programación en PDF (Calidad baja)
         <?php else: ?>Download PDF schedule here (Low quality)
         <?php endif; ?>
         </a>
       </div>
-      <div class="hd">
+      <div class="hd span6">
         <a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion_hd.pdf" class="btn" target="_blank">
-        <?php if(qtrans_getLanguage() == 'es'): ?>Descarga aquí la programación completa en PDF (Calidad alta)
+        <?php if(qtrans_getLanguage() == 'es'): ?>Programación en PDF (Calidad alta)
         <?php else: ?>Download PDF schedule here ( Full HD )
         <?php endif; ?>
         </a>
