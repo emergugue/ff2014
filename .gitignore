@@ -4,6 +4,7 @@
 .cvs
 *.bak
 *.swp
+.htaccess
 Thumbs.db
 wp-config.php
 wp-content/uploads/
