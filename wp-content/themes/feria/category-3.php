@@ -138,7 +138,7 @@
 
   <div class="span6 logoDescarga">
     <span class="descarga">
-      <a href="<?php bloginfo('template_directory'); ?>/descargables/LogoFeria2013.zip"><?php if(qtrans_getLanguage() == 'es'): ?>Descargar logo<?php else: ?>Download logo <?php endif; ?> </a></span>   
+      <a href="<?php bloginfo('template_directory'); ?>/descargables/logos.zip"><?php if(qtrans_getLanguage() == 'es'): ?>Descargar logo<?php else: ?>Download logo <?php endif; ?> </a></span>   
     </div>
 
     <div class="span6 logosVarios">
