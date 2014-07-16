@@ -197,7 +197,7 @@ ga('send', 'pageview');
             <li class="menu_envivo"><a href="<?php echo home_url(); ?>/la-feria-en-vivo/" title="En Vivo">En Vivo</a></li>
           </ul>
           <?php else: ?>
-          <ul class="menuEn menuholderEn hidden-phone"> 
+          <ul class="menuEn menuholderEn"> 
             <!-- <li class="menu_inicio"><a href="<?php echo home_url(); ?>/en/" title="Inicio" class="active">Inicio</a></li> -->
             <li class="menu_programacion"><a href="<?php echo home_url(); ?>/en/category/programacion/" title="Programación">Schedule</a></li>
             <li class="menu_turistica"><a href="<?php echo home_url(); ?>/en/category/infoturistica/" title="Info Turística">Four Turist</a></li>

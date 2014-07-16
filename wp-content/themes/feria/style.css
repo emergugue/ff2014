@@ -2387,7 +2387,7 @@ text-shadow: 0 1px 0 #ffffff;
 	float: none;
 	}
 
-.menuholder a {
+.menuholder a, .menuholderEn a {
 	width: 100%;
 	/*background:url(images/iconos-menu.png);*/
 	display:block; 
@@ -2400,7 +2400,7 @@ text-shadow: 0 1px 0 #ffffff;
 	margin-bottom: 10px;
 	font-size: 1.3em
 	}
-.menuholder a:hover {
+.menuholder a:hover, .menuholderEn a:hover {
 	width: 100%;
 	/*background:url(images/iconos-menu.png);*/
 	display:block; 
@@ -2423,12 +2423,12 @@ text-shadow: 0 1px 0 #ffffff;
 	-moz-border-radius-bottomright: 0px;
 	border-bottom-right-radius: 0px;
 }
-.menuholderEn a {
+/*.menuholderEn a {
 	width: 100%;
-	/*background:url(images/menuEn.png);*/
+	background:url(images/menuEn.png);
 	display:block; 
 	height:85px;
-}
+}*/
 
 /*ESTADO NORMAL*/
 .menu_inicio a {width:60px;}
@@ -2446,6 +2446,23 @@ text-shadow: 0 1px 0 #ffffff;
 .menu_saladeprensa a:hover {background-position:5px -243px;}
 .menu_contactenos a:hover {background-position:5px -328px;}
 .menu_envivo a:hover {background-position:5px -409px;}
+
+
+.menuholderEn .menu_inicio a {width:60px;}
+.menuholderEn .menu_programacion a {background-position:5px 7px;}
+.menuholderEn .menu_turistica a {background-position:5px -70px;}
+.menuholderEn .menu_historia a {background-position:5px -153px; }
+.menuholderEn .menu_saladeprensa a {background-position:5px -243px;}
+.menuholderEn .menu_contactenos a {background-position:5px -328px;}
+.menuholderEn .menu_envivo a {background-position:5px -409px;}
+
+.menuholderEn .menu_inicio a:hover {width:60px;}
+.menuholderEn .menu_programacion a:hover {background-position:5px 7px;}
+.menuholderEn .menu_turistica a:hover {background-position:5px -70px;}
+.menuholderEn .menu_historia a:hover {background-position:5px -153px; }
+.menuholderEn .menu_saladeprensa a:hover {background-position:5px -243px;}
+.menuholderEn .menu_contactenos a:hover {background-position:5px -328px;}
+.menuholderEn .menu_envivo a:hover {background-position:5px -409px;}
 
 
 .barra-menu{
