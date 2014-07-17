@@ -92,7 +92,7 @@ get_header(); ?>
 					      $imgmeta = wp_get_attachment_metadata( $id );
 					
 					// Convert the shutter speed retrieve from database to fraction
-					      if ((1 / $imgmeta['image_meta']['shutter_speed']) > 1)
+					      if ($imgmeta['image_meta']['shutter_speed'] > 0 && (1 / $imgmeta['image_meta']['shutter_speed']) > 1)
 					      {
 					         if ((number_format((1 / $imgmeta['image_meta']['shutter_speed']), 1)) == 1.3
 					         or number_format((1 / $imgmeta['image_meta']['shutter_speed']), 1) == 1.5
