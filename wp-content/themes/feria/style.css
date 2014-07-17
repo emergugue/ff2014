@@ -1453,9 +1453,9 @@ input, textarea, select, .uneditable-input {
 	}
 
 .galeriaFeriaD,.videoFeria {
-	width:307px;
-	height:250px;
-	margin:0 0 20px;
+  	height: 145px;
+    margin: 20px 0;
+    width: 307px;
 	}
 
 .logoDescarga {

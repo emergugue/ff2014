@@ -24,7 +24,8 @@
 							<header>
 								<div class='header-izq'><h2><?php echo get_the_title(); ?></h2></div>
 								<div class='header-der'>
-									<time datetime="<?php echo get_the_time('Y-m-j'); ?>" pubdate><?php echo get_the_time('j'); echo " de "; echo get_the_time('F'); echo " del "; echo get_the_time('Y'); ?></time>
+									<time datetime="<?php echo get_the_time('Y-m-j'); ?>" pubdate><?php echo get_the_time('j')." de ".get_the_time('F')." del ".get_the_time('Y'); ?></time>
+									<?php echo 'sizas'.get_the_time() ;?>
 								</div>
 							</header>
 							<section>

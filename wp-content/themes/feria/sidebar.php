@@ -10,8 +10,8 @@
                       
 
                             
-				<!--			<div class="videoFeria">
-                            <div class="tit">
+							<div class="videoFeria">
+                         <!--   <div class="tit">
                                  <span class="icono"></span>
                                  <?php if(qtrans_getLanguage() == 'es'): ?>
                                  <span>Video de la feria</span>         
@@ -20,7 +20,11 @@
                                   <?php endif; ?>      
                             </div>                
                              <iframe width="300" height="169" src="//www.youtube.com/embed/aam3ce4gpfM" frameborder="0" allowfullscreen></iframe>
-                         </div>-->	
+                           -->
+                           <a href="http://bit.ly/U7s2um" alt="Descargar">
+                              <img src="<?php echo home_url(); ?>/wp-content/themes/feria/images/descarga-flores.jpg" >
+                           </a>
+                  </div>
 					
 					<?php } else {?>
                     
