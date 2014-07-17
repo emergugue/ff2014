@@ -146,9 +146,8 @@ jQuery(document).ready(function($){
 
             var target = $('#container');
 
-            $('html, body').animate({
-              scrollTop: (target.offset().top - 50)
-            }, 2000);
+            $('html, body').delay(1000).animate({
+              scrollTop: ( target.offset().top - 50 )});
 
                       
         }else
