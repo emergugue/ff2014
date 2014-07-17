@@ -142,7 +142,14 @@ jQuery(document).ready(function($){
             });
 
             container.isotope('remove', $(".element"));          
-            container.isotope('insert', $(data)); 
+            container.isotope('insert', $(data));
+
+            var target = $('#container');
+
+            $('html, body').animate({
+              scrollTop: (target.offset().top - 50)
+            }, 2000);
+
                       
         }else
         {
