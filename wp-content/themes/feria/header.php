@@ -98,6 +98,21 @@
 <script type="text/javascript">
 jQuery(document).ready(function($){
 
+  $("#programacion-baja").on("click", function(){
+    _gaq.push(['_trackEvent', 'descarga', 'programacion', 'baja']);
+  });
+
+  $("#programacion-alta").on("click", function(){
+    _gaq.push(['_trackEvent', 'descarga', 'programacion', 'alta']);
+  });
+
+   $("#descarga-cancion").on("click", function(){
+    _gaq.push(['_trackEvent', 'descarga', 'cancion', 'feria']);
+  });
+
+  
+  
+  
   var evnts = function(){
     return {
       "event":

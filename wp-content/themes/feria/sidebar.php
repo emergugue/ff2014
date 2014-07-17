@@ -21,7 +21,7 @@
                             </div>                
                              <iframe width="300" height="169" src="//www.youtube.com/embed/aam3ce4gpfM" frameborder="0" allowfullscreen></iframe>
                            -->
-                           <a href="http://bit.ly/U7s2um" alt="Descargar">
+                           <a id="descarga-cancion" href="http://bit.ly/U7s2um" alt="Descargar">
                               <img target="_blank" src="<?php echo home_url(); ?>/wp-content/themes/feria/images/descarga-flores.jpg" >
                            </a>
                   </div>
