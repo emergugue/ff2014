@@ -25,6 +25,7 @@
       <![endif]-->
 
       <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+      <link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/favicon.ico" /> 
 
 
       <!-- wordpress head functions -->
