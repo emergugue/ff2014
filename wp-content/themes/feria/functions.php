@@ -9,6 +9,7 @@ sidebars, comments, ect.
 */
 
 // Get Bones Core Up & Running!
+setlocale(LC_ALL, 'es_ES.UTF-8');
 require_once('library/bones.php');            // core functions (don't remove)
 require_once('library/plugins.php');          // plugins & extra functions (optional)
 
