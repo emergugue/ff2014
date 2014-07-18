@@ -100,15 +100,15 @@
 jQuery(document).ready(function($){
 
   $("#programacion-baja").on("click", function(){
-    _gaq.push(['_trackEvent', 'descarga', 'programacion', 'baja']);
+    ga('send', 'event', 'descarga', 'programacion', 'baja');
   });
 
   $("#programacion-alta").on("click", function(){
-    _gaq.push(['_trackEvent', 'descarga', 'programacion', 'alta']);
+    ga('send', 'event', 'descarga', 'programacion', 'alta');
   });
 
    $("#descarga-cancion").on("click", function(){
-    _gaq.push(['_trackEvent', 'descarga', 'cancion', 'feria']);
+    ga('send', 'event', 'descarga', 'cancion', 'feria');
   });
 
   
