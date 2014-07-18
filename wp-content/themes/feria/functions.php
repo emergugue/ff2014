@@ -837,5 +837,4 @@ add_action( 'widgets_init', 'creaWidgets' );
 
 include_once(TEMPLATEPATH.'/widgets/widget-home.php');
 
-
 ?>
