@@ -76,56 +76,7 @@ if ($blog_hero){
 <!-- CIERRA SIDEBAR HOME --> 
         </div><!-- cierra row -->  
 
-<div style="display:none" class="clearfix row-fluid afterSidebar">
-  <div class="span7">
 
-   <!-- ARTISTAS DE LA FERIA --> 	
-   <ul class="artistas nav-tabs">
-     <li><h2>Artistas de la feria</h2></li>
-
-     <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Música<b class="caret"></b></a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Tropical</a></li>
-        <li><a href="#">Popular Tradicional</a></li>
-        <li><a href="#">Popular Urbana</a></li>
-        <li><a href="#">Clásica</a></li>
-        <li><a href="#">Folclor</a></li>
-      </ul>
-    </li>
-
-    <li><a href="#">Danza</a></li>
-    <li><a href="#">Teatro</a></li>
-
-    <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Otras Artes<b class="caret"></b></a>
-      <ul class="dropdown-menu">
-       <li> <a href="#">Magia</a></li>
-       <li> <a href="#">Humor</a></li>
-       <li> <a href="#">Cuentería</a></li>
-     </ul>  
-   </li>
- </ul>
-
- <div class="galeriaArtistas">
-   <ul>
-    <li class="flechaIzq"><a href="#">Atrás</a></li> 
-    <li><img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="160" height="133" /></li>
-    <li><img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="160" height="133" /></li>
-    <li><img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="160" height="133" /></li>
-    <li class="flechaDer"><a href="#">Siguiente</a></li> 
-  </ul>           
-</div>
-
-<!-- CIERRA ARTISTAS DE LA FERIA --> 	
-</div>
-
-<div class="span5">
- <div class="galeriaFeria">
- </div>
-</div>
-
-</div>  
 </div>                          
 
 <?php get_footer(); ?>

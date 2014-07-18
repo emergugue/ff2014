@@ -1,26 +1,9 @@
 				<div id="sidebar1" class="fluid-sidebar sidebar span4 hidden-phone" role="complementary">
 				
-					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+					
                     
                     <?php if ( is_home() ) {?>
-    						
-                             <span class="prensa">
-                      </span>
-                                   
-                      
-
-                            
 							<div class="videoFeria">
-                 <!--   <div class="tit">
-                         <span class="icono"></span>
-                         <?php if(qtrans_getLanguage() == 'es'): ?>
-                         <span>Video de la feria</span>         
-                         <?php else: ?>
-                         <span>Festival's video</span>  
-                          <?php endif; ?>      
-                    </div>                
-                     <iframe width="300" height="169" src="//www.youtube.com/embed/aam3ce4gpfM" frameborder="0" allowfullscreen></iframe>
-                   -->
                <a id="descarga-cancion" target="_blank"  href="http://bit.ly/U7s2um" alt="Descargar">
                   <img src="<?php echo home_url(); ?>/wp-content/themes/feria/images/descarga-flores.jpg" >
                </a>
@@ -43,20 +26,7 @@
                        <?php endif; ?> 
                       </span>
 
-                         <div style="display:none" class="hoyFeria">
-                            <div class="tit">
-                                 <span class="icono"></span>
-                                   <?php if(qtrans_getLanguage() == 'es'): ?>
-                                   <span>Hoy en la feria</span>         
-                                    <?php else: ?>
-                                   <span>Today's Events</span> 
-                                    <?php endif; ?>
-                            </div><!-- cierra .tit -->  
-                            
-                            <div class="galeriaHoySidebar"></div>
-                            <!-- cierra .galeriaHoy --> 
-                           
-                         </div><!-- cierra .hoyFeria -->
+                        
                          
                          <div class="infoTurismo">
                           <?php if(qtrans_getLanguage() == 'es'): ?>
@@ -99,9 +69,8 @@
 </div>
                       <?php }?>	
                      
-						<?php dynamic_sidebar( 'sidebar1' ); ?>
-
-					<?php else : ?>
+						<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+            <?php dynamic_sidebar( 'sidebar1' ); ?>
 
 					<?php endif; ?>
 
