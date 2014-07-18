@@ -24,15 +24,14 @@
 							<header>
 								<div class='header-izq'><h2><?php echo get_the_title(); ?></h2></div>
 								<div class='header-der'>
-									<time datetime="<?php echo get_the_time('Y-m-j', get_the_ID()); ?>" pubdate><?php echo get_the_time('j',get_the_ID())." de ".get_the_time('F',get_the_ID())." del ".get_the_time('Y',get_the_ID()); ?></time>
+									<time datetime="<?php echo get_the_time('Y-m-j', get_the_ID()); ?>" pubdate><?php the_time('j \d\e F \d\e\l Y') ?></time>
 								</div>
 							</header>
 							<section>
 								<p><?php
-								$content = get_the_content();
-								$content = substr(wp_filter_nohtml_kses( $content ), 0,100).'...';
-								$content = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]","", $content);
-								echo $content;
+							/*	$content = get_the_content();
+								echo $content; */
+								the_content('');
 								?>
 							</section>
 							<footer>
