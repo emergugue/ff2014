@@ -11,20 +11,25 @@
 
                             
 							<div class="videoFeria">
-                         <!--   <div class="tit">
-                                 <span class="icono"></span>
-                                 <?php if(qtrans_getLanguage() == 'es'): ?>
-                                 <span>Video de la feria</span>         
-                                 <?php else: ?>
-                                 <span>Festival's video</span>  
-                                  <?php endif; ?>      
-                            </div>                
-                             <iframe width="300" height="169" src="//www.youtube.com/embed/aam3ce4gpfM" frameborder="0" allowfullscreen></iframe>
-                           -->
-                           <a id="descarga-cancion" target="_blank"  href="http://bit.ly/U7s2um" alt="Descargar">
-                              <img src="<?php echo home_url(); ?>/wp-content/themes/feria/images/descarga-flores.jpg" >
-                           </a>
-                  </div>
+                 <!--   <div class="tit">
+                         <span class="icono"></span>
+                         <?php if(qtrans_getLanguage() == 'es'): ?>
+                         <span>Video de la feria</span>         
+                         <?php else: ?>
+                         <span>Festival's video</span>  
+                          <?php endif; ?>      
+                    </div>                
+                     <iframe width="300" height="169" src="//www.youtube.com/embed/aam3ce4gpfM" frameborder="0" allowfullscreen></iframe>
+                   -->
+               <a id="descarga-cancion" target="_blank"  href="http://bit.ly/U7s2um" alt="Descargar">
+                  <img src="<?php echo home_url(); ?>/wp-content/themes/feria/images/descarga-flores.jpg" >
+               </a>
+              </div>
+              <div class="viajero-feria">
+                <a href="<?php echo home_url(); ?>/viajero-de-las-flores/">
+                  <img src="<?php echo home_url(); ?>/wp-content/themes/feria/images/banner-viajero.jpg" alt="Conoce al viajero de las flores" class="viajero-banner">
+                </a>
+              </div>
 					
 					<?php } else {?>
                     

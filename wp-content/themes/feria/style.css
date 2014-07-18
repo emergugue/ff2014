@@ -359,7 +359,9 @@ div.container-fluid.nav-container {
 	background-color:#dedede;
 	cursor:pointer;
 	}
-	
+.viajero-feria	{
+	margin-bottom: 35px;
+}
 	
 
 /* BUSCADOR */
@@ -908,8 +910,6 @@ a.carousel-control.right {
 .table-bordered {
 	background-color:#FFF;}
 	
-
-
 .element {
  float: left;
  width:48.5%;
@@ -921,9 +921,6 @@ a.carousel-control.right {
     -moz-border-radius: 6px;
 }
 
-
-
-	
 .element h2 {
 	background-color:#86b8e2;
 	border-radius:6px;
@@ -1458,7 +1455,7 @@ input, textarea, select, .uneditable-input {
 	}
 
 .galeriaFeriaD,.videoFeria {
-  	height: 145px;
+  	height: 128px;
     margin: 20px 0;
     width: 307px;
 	}
