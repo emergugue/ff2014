@@ -849,13 +849,14 @@ a.carousel-control.right {
 	display:block;
 	float:left;
 	}
-	
+.travel .vermas, .readmore {
+	margin-top: -50px;
+}
+
 .vermas, .readmore {
 	float:right;
-	width:72px;}
-
-
-	
+	width:72px;
+}
 .vermas a {
 	background-image:url(images/vermas.png);
 	width:71px;
@@ -864,7 +865,6 @@ a.carousel-control.right {
 	text-indent:-9000%;
 
 	}
-
 	
 .readmore a {
 	background-image:url(images/readmore.png);
@@ -894,7 +894,12 @@ a.carousel-control.right {
 .vermasp a:hover {
 	background-position:0 -39px;
 	}
-
+.wp-prev-next{
+	text-align: center;
+}
+.prev-link, .next-link{
+	padding: 0 20px;
+}
 .afterSidebar {
 	margin-top:40px;}
 
@@ -1807,7 +1812,7 @@ footer li {
 
 #main article footer{
 	border-top: none;
-	margin-top: 0;
+	margin-top: 70px;
 	padding-top: 0;
 	position: relative;
 	min-height: 20px;
