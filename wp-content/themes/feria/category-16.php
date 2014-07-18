@@ -25,7 +25,7 @@
 								<div class='header-izq'><h2><?php echo get_the_title(); ?></h2></div>
 								<div class='header-der'>
 									<time datetime="<?php echo get_the_time('Y-m-j', get_the_ID()); ?>" pubdate>
-										<?php echo date('j \d\e F \d\e\l Y', get_post_time()) ?></time>
+										<?php echo /*date('j \d\e F \d\e\l Y', get_post_time())/**/strftime('%d \d\e %B \d\e\l %Y', get_post_time()) ?></time>
 								</div>
 							</header>
 							<section>
