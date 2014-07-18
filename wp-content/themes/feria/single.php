@@ -33,7 +33,8 @@
   	                          		?>	
 		                             <div class="page-header-date">
 		                                <span itemprop="headline">
-		                                    <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
+		                                 <time datetime="<?php echo get_the_time('Y-m-j', get_the_ID()); ?>" pubdate>
+										<?php echo strftime('%d de %B del %Y', get_post_time()) ?></time>
 		                                </span>
 		                            </div>		
   	                          		<?php
