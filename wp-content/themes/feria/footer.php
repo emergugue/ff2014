@@ -33,13 +33,15 @@
      <span class="titulo-patrocinadores">Big sponsors:</span>
   <?php endif; ?>
     <ul class="patrocinadores">
+      <li><a class="exito" href="http://www.grupoexito.com.co/" target="_blank">Extio</a></li>
      <li><a class="cocacola" href="http://www.coca-cola.com.co/" target="_blank">Coca Cola</a></li>
      <li><a class="epm" href="http://www.epm.com.co/site/" target="_blank">EPM</a></li>
      <li><a class="fla" href="http://flaenlinea.com/" target="_blank">FLA</a></li>
      <li><a class="tigo" href="http://www.tigo.com.co/" target="_blank">Tigo</a></li>
      <li><a class="pilsen" href="http://www.pilsen.com.co/" target="_blank">Pilsen</a></li>
      <li><a class="une" href="http://www.une.com.co/" target="_blank">UNE</a></li>
-     <li><a class="tm" href="http://telemedellin.tv/" href="http://www.telemedellin.tv" target="_blank">Telemedellín</a></li>
+     <li><a class="tm" href="http://telemedellin.tv/" target="_blank">Telemedellín</a></li>
+     <li><a class="caracol" href="http://www.caracoltv.com/" target="_blank">Caracol TV</a></li>
    </ul>
   <div class="row-fluid content-organizadores">
     <div class="span6">

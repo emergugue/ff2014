@@ -1611,6 +1611,20 @@ footer{
 	display: block;
 	text-indent: -9999px;
 }
+.exito{
+	background: url(images/patrocinadores.jpg) no-repeat -686px 0px;	
+	height: 60px;
+	width: 82px;
+	display: block;
+	text-indent: -9999px;
+}
+.caracol{
+	background: url(images/patrocinadores.jpg) no-repeat -771px 0px;	
+	height: 60px;
+	width: 45px;
+	display: block;
+	text-indent: -9999px;
+}
 .titulo-organizadores, .titulo-apoyan{
 	display: block;
 	clear: both;
