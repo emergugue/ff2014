@@ -1,1 +1,0 @@
-<?php echo date("j/d/Y"); ?>
