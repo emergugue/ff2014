@@ -95,7 +95,7 @@
       </center>
       <div id="container" class="clearfix">
         <?php
-  $fechaHoy = date("j/n/Y");
+  $fechaHoy = date("d/m/Y");
   
   $myQuery = new WP_Query(array(
        'cat' => 10,

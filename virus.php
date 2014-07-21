@@ -1,1 +1,1 @@
-<?php echo date("j/n/Y"); ?>
+<?php echo date("d/m/Y"); ?>
