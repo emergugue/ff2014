@@ -136,7 +136,7 @@
       $class .= trim($j) . " ";
     }
     ?>
-    <?php if($fechaSeleccionada >= $fechaInicio AND $fechaSeleccionada <= $fechaFin): ?>
+    <?php if($fechaSeleccionada >= $fechaInicio AND $fechaSeleccionada <= $fecha_fin): ?>
       <?php
       $evento_class = '';
       $posttags = get_the_tags();
@@ -200,7 +200,7 @@
       $class .= trim($j) . " ";
     }
     ?>
-    <?php if($fechaSeleccionada >= $fechaInicio AND $fechaSeleccionada <= $fechaFin): ?>
+    <?php if($fechaSeleccionada >= $fechaInicio AND $fechaSeleccionada <= $fecha_fin): ?>
       <?php
       $evento_class = '';
       $posttags = get_the_tags();
