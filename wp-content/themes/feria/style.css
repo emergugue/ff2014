@@ -1612,13 +1612,15 @@ footer{
 	width: 105px;
 	display: block;
 	text-indent: -9999px;
+	margin-right: 10px;
 }
 .exito{
-	background: url(images/patrocinadores.jpg) no-repeat -686px 0px;	
+	background: url(images/patrocinadores.jpg) no-repeat -719px 0px;	
 	height: 60px;
-	width: 82px;
+	width: 42px;
 	display: block;
 	text-indent: -9999px;
+	margin-right: 15px;
 }
 .caracol{
 	background: url(images/patrocinadores.jpg) no-repeat -771px 0px;	
