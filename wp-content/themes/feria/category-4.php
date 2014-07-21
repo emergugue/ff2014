@@ -96,6 +96,8 @@
       <div id="container" class="clearfix">
         <?php
   $fechaHoy = date("d/m/Y");
+  $fechaSeleccionada = str_replace('/', '-', $fechaHoy);
+  $fechaSeleccionada = strtotime($fechaSeleccionada);
   
   $myQuery = new WP_Query(array(
        'cat' => 10,
@@ -105,10 +107,9 @@
   // The Loop
   if ( $myQuery->have_posts() ):
   while ( $myQuery->have_posts() ) : $myQuery->the_post();
-    $fechaSeleccionada = str_replace('/', '-', $fechaHoy);
-    $fechaSeleccionada = strtotime($fechaSeleccionada);
+
     $fechaInicio       = str_replace('/', '-', get_post_meta($post->ID,'fecha_inicio',true));
-    $fechaInicio      = strtotime($fechaInicio);
+    $fechaInicio       = strtotime($fechaInicio);
     $fechaFin         = str_replace('/', '-', get_post_meta($post->ID,'fecha_fin',true));
     $fechaFin         = strtotime($fechaFin);
 
@@ -171,8 +172,6 @@
   if ( $myQuery->have_posts() ):
   while ( $myQuery->have_posts() ) : $myQuery->the_post();
 
-    $fechaSeleccionada = str_replace('/', '-', $fechaHoy);
-    $fechaSeleccionada = strtotime($fechaSeleccionada);
     $fechaInicio = str_replace('/', '-', get_post_meta($post->ID,'fecha_inicio',true));
     $fechaInicio = strtotime($fechaInicio);
     $fechaFin    = str_replace('/', '-', get_post_meta($post->ID,'fecha_fin',true));
