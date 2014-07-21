@@ -103,6 +103,8 @@
        'cat' => 10,
        'posts_per_page' => -1,
        'tag'=>'destacado',
+       'orderby' => 'meta_value', 
+       'meta_key' => 'hora_inicio'
   ));
   // The Loop
   if ( $myQuery->have_posts() ):
@@ -165,8 +167,10 @@
   wp_reset_query();
 
     $myQuery = new WP_Query(array(
-       'cat' => 10,
-       'posts_per_page' => -1,
+      'cat' => 10,
+      'posts_per_page' => -1,
+      'orderby' => 'meta_value', 
+      'meta_key' => 'hora_inicio'
   ));
   // The Loop
   if ( $myQuery->have_posts() ):
