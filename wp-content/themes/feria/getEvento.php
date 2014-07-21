@@ -19,8 +19,8 @@ $myQuery = new WP_Query(array(
     $fechaSeleccionada = strtotime($fechaSeleccionada);
     $fechaInicio = str_replace('/', '-', get_post_meta($post->ID,'fecha_inicio',true));
     $fechaInicio = strtotime($fechaInicio);
-    $fechaFin = str_replace('/', '-', get_post_meta($post->ID,'fecha_fin',true));
-    $fechaFin = strtotime($fechaFin);
+    $fechaFin   = str_replace('/', '-', get_post_meta($post->ID,'fecha_fin',true));
+    $fechaFin   = strtotime($fechaFin);
 
     $horaInicio = get_post_meta($post->ID,'hora_inicio',true);
     $horaFin    = get_post_meta($post->ID,'hora_fin',true);
@@ -87,17 +87,17 @@ $myQuery = new WP_Query(array(
 
         $fechaSeleccionada = str_replace('/', '-', $_POST['fecha']);
         $fechaSeleccionada = strtotime($fechaSeleccionada);
-        $fechaInicio = str_replace('/', '-', get_post_meta($post->ID,'fecha_inicio',true));
-        $fechaInicio = strtotime($fechaInicio);
-        $fechaFin = str_replace('/', '-', get_post_meta($post->ID,'fecha_fin',true));
-        $fechaFin = strtotime($fechaFin);
+        $fechaInicio       = str_replace('/', '-', get_post_meta($post->ID,'fecha_inicio',true));
+        $fechaInicio       = strtotime($fechaInicio);
+        $fechaFin          = str_replace('/', '-', get_post_meta($post->ID,'fecha_fin',true));
+        $fechaFin          = strtotime($fechaFin);
 
-        $horaInicio = get_post_meta($post->ID,'hora_inicio',true);
-        $horaFin = get_post_meta($post->ID,'hora_fin',true);
-        $jornada = get_post_meta($post->ID,'jornada',true);
-        $lugar = get_post_meta($post->ID,'lugar',true);
-        $telefono = get_post_meta($post->ID,'telefono',true);
-        $precio   = get_post_meta($post->ID,'precio',true);
+        $horaInicio        = get_post_meta($post->ID,'hora_inicio',true);
+        $horaFin           = get_post_meta($post->ID,'hora_fin',true);
+        $jornada           = get_post_meta($post->ID,'jornada',true);
+        $lugar             = get_post_meta($post->ID,'lugar',true);
+        $telefono          = get_post_meta($post->ID,'telefono',true);
+        $precio            = get_post_meta($post->ID,'precio',true);
 
         $jornadas = explode(',', $jornada);
         $humanHoraInicio = date("g:i a", strtotime($horaInicio));
