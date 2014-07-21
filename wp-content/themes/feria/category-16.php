@@ -14,7 +14,7 @@
 			</div>
 			<div class='travel span12'>
 				<?php
-				$args = array('cat'=>'16', 'orderby' => 'date', 'order' => 'ASC') ;
+				$args = array('cat'=>'16', 'orderby' => 'date', 'order' => 'DESC') ;
 				$query = new WP_Query( $args );
 				
 				if ($query->have_posts()) :
