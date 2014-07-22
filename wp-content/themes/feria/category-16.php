@@ -47,14 +47,14 @@
 				      
 			</div>
 			
-			<div class="row pagination">	
+			 <div class="row pagination">	
 				<nav class="wp-prev-next">
 					<ul class="clearfix">
 						<li class="prev-link"><?php next_posts_link(_e('&laquo; Anterior', "bonestheme")); ?></li>
 						<li class="next-link"><?php previous_posts_link(_e('Siguiente &raquo;', "bonestheme")); ?></li>
 					</ul>
 				</nav>
-			</div>
+			</div> 
 		</div> <!-- end #main -->
 			<?php get_sidebar(); // sidebar 1 ?>
 	</div> <!-- end #content -->
