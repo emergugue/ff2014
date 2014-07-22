@@ -122,7 +122,8 @@ $myQuery = new WP_Query(array(
           <?php
               $evento_class = '';
               $posttags = get_the_tags();
-              if ($posttags) {
+              if ($posttags) 
+              {
                    foreach($posttags as $tag) {
                         $evento_class .= strtolower($tag->name).' '; 
                     } 
