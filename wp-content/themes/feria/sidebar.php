@@ -4,7 +4,7 @@
                     
                     <?php if ( is_home() ) {?>
 							<div class="videoFeria">
-               <a id="descarga-cancion" target="_blank"  href="http://bit.ly/U7s2um" alt="Descargar">
+               <a id="descarga-cancion" target="_blank"  href="http://bit.ly/1wVLebc" alt="Descargar">
                   <img src="<?php echo home_url(); ?>/wp-content/themes/feria/images/descarga-flores.jpg" >
                </a>
               </div>
