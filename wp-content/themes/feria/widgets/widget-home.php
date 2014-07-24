@@ -48,11 +48,11 @@
             <div class="btn-programacion span2 hidden-phone">
               <?php if(qtrans_getLanguage() == 'es'): ?>
 
-                <span> <a href="/ff2014/programacion/" >Ver todos los eventos </a> </span>
+                <span> <a href="<?php echo home_url(); ?>/programacion/" >Ver todos los eventos </a> </span>
 
               <?php else: ?>
 
-                <span> <a href="/ff2014/programacion/" >View all events </a> </span>
+                <span> <a href="<?php echo home_url(); ?>/programacion/" >View all events </a> </span>
 
               <?php endif; ?>
               
