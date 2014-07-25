@@ -13,6 +13,11 @@
                   <img src="<?php echo home_url(); ?>/wp-content/themes/feria/images/banner-viajero.jpg" alt="Conoce al viajero de las flores" class="viajero-banner">
                 </a>
               </div>
+              <div class="oficial">
+                <p>Video oficial Feria de las Flores 2014</p>
+                <iframe width="300" height="200" src="//www.youtube.com/embed/QqpI0EDnIzA" frameborder="0" allowfullscreen></iframe>
+              </div>
+
 					
 					<?php } else {?>
                     
@@ -67,6 +72,7 @@
 </ul>
 <?php endif; ?>
 </div>
+
                       <?php }?>	
                      
 						<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
