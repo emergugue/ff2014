@@ -360,7 +360,7 @@ div.container-fluid.nav-container {
 	cursor:pointer;
 	}
 .viajero-feria	{
-	margin-bottom: 35px;
+	margin-bottom: 20px;
 }
 	
 
@@ -1453,10 +1453,15 @@ input, textarea, select, .uneditable-input {
 	margin:0 0 20px;
 	}
 
-.galeriaFeriaD,.videoFeria {
-  	height: 128px;
-    margin: 20px 0;
-    width: 307px;
+	.galeriaFeriaD,.videoFeria {
+		height: 128px;
+		width: 307px;
+		margin-bottom: 35px;
+	}
+
+	.oficial {
+		margin-top: 20px;
+		margin-bottom: 20px;
 	}
 
 .logoDescarga {

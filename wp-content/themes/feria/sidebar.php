@@ -2,21 +2,22 @@
 				
 					
                     
-                    <?php if ( is_home() ) {?>
-							<div class="videoFeria">
-               <a id="descarga-cancion" target="_blank"  href="http://bit.ly/1wVLebc" alt="Descargar">
-                  <img src="<?php echo home_url(); ?>/wp-content/themes/feria/images/descarga-flores.jpg" >
-               </a>
+         <?php if ( is_home() ) {?>
+              <div class="oficial">
+                <p>Video oficial Feria de las Flores 2014</p>
+                <iframe width="300" height="200" src="//www.youtube.com/embed/WXsOnprrdow?list=UUAFLU70jPz4bODq_5BSWPIg" frameborder="0" allowfullscreen></iframe>
               </div>
               <div class="viajero-feria">
                 <a href="<?php echo home_url(); ?>/viajero-de-las-flores/">
                   <img src="<?php echo home_url(); ?>/wp-content/themes/feria/images/banner-viajero.jpg" alt="Conoce al viajero de las flores" class="viajero-banner">
                 </a>
               </div>
-              <div class="oficial">
-                <p>Video oficial Feria de las Flores 2014</p>
-                <iframe width="300" height="200" src="//www.youtube.com/embed/QqpI0EDnIzA" frameborder="0" allowfullscreen></iframe>
+              <div class="videoFeria">
+               <a id="descarga-cancion" target="_blank"  href="http://bit.ly/1wVLebc" alt="Descargar">
+                  <img src="<?php echo home_url(); ?>/wp-content/themes/feria/images/descarga-flores.jpg" >
+               </a>
               </div>
+
 
 					
 					<?php } else {?>
