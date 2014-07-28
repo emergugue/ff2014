@@ -14,7 +14,8 @@
 			</div>
 			<div class='travel span12'>
 				<?php
-				$args = array('cat'=>'16', 'orderby' => 'date', 'order' => 'DESC') ;
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+				$args = array('cat'=>'16', 'orderby' => 'date', 'order' => 'DESC','paged' => $paged) ;
 				$query = new WP_Query( $args );	
 				if ($query->have_posts()) :
                 while ($query->have_posts() ) : $query->the_post();
@@ -49,8 +50,8 @@
 			 <div class="row pagination">	
 				<nav class="wp-prev-next">
 					<ul class="clearfix">
-						<li class="prev-link"><?php next_posts_link(_e('&laquo; Anterior', "bonestheme")); ?></li>
-						<li class="next-link"><?php previous_posts_link(_e('Siguiente &raquo;', "bonestheme")); ?></li>
+						<li class="prev-link"><?php next_posts_link('Siguiente', $query->max_num_pages); ?></li> 
+						<li class="next-link"><?php previous_posts_link('Anterior'); ?></li>
 					</ul>
 				</nav>
 			</div> 
