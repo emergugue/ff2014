@@ -132,6 +132,7 @@ jQuery(document).ready(function($){
       url: "<?php bloginfo('template_directory'); ?>/getEvento.php",
       success: function(data){
         var container = $("#container");
+        container.text('');
         container.isotope('destroy');
         $("#loading").css("display","none");
 
