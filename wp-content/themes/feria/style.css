@@ -2747,3 +2747,9 @@ clear:initial;
 {
 text-transform: capitalize;
 }
+
+.app-alcaldia
+{
+	margin-bottom: 30px;
+    text-align: center;
+}

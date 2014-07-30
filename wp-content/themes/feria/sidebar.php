@@ -74,11 +74,24 @@
 <?php endif; ?>
 </div>
 
-                      <?php }?>	
-                     
-						<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
-            <?php dynamic_sidebar( 'sidebar1' ); ?>
+<?php }?>	
 
-					<?php endif; ?>
+<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+  <?php dynamic_sidebar( 'sidebar1' ); ?>
 
-				</div>
+<?php endif; ?>
+
+<?php if ( is_home() ) {?>
+<div class="app-alcaldia">
+  <a href="https://play.google.com/store/apps/details?id=com.alpessolutions.evensite&hl=es_419">
+    <img src="<?php echo home_url(); ?>/wp-content/themes/feria/images/movilg.jpg" alt="Aplicacion movil de la feria" class="app">
+  </a>
+</div>
+<div class="app-alcaldia">
+  <a href="https://itunes.apple.com/co/app/eventsite/id708954209?mt=8">
+    <img src="<?php echo home_url(); ?>/wp-content/themes/feria/images/movila.jpg" alt="Aplicacion movil de la feria" class="app">
+  </a>
+</div>
+<?php } ?>
+
+</div>
