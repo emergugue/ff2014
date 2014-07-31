@@ -442,13 +442,28 @@ border-radius:8px;
     -moz-border-radius: 8px;
 }
 
+
+.marquee-feria{
+	z-index: 5;
+	background: #E0E1D4;;
+}
+.marquee-feria a {
+	color: black;
+	font-size: 14px;
+	padding: 0 15px 0 15px;
+}
+.inicio{
+	position: relative !important;
+}
 /* SLIDER */
 
 #content #main .slider {
 	margin:0 0 0px 0;
 	padding:0;
-	
 	}
+.slider{
+	z-index: 1;
+}
 
 .rsUni, .rsUni .rsOverflow, .rsUni .rsSlide, .rsUni .rsVideoFrameHolder, .rsUni .rsThumbs {
 background-color:transparent !important;
@@ -459,6 +474,7 @@ margin:0;
 
 .rsOverflow, .royalSlider {
 	height:310px !important;
+	position: initial !important;
 	}
 .rsImg {
 	margin-top:0px !important;
