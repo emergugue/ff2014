@@ -26,13 +26,16 @@ function ptmsshow()
 	$ptms_orderbys = get_option('ptms_orderbys');
 	$ptms_order = get_option('ptms_order');
 	$ptms_spliter = get_option('ptms_spliter');
+	$hoy    	=   date('d/m/Y');
+    $hoyff  	=   strtotime(date('d-m-Y')) ;
+	$manana 	=   date('d/m/Y').' +1 day';
 	
 	if(!is_numeric($ptms_scrollamount)){ $ptms_scrollamount = 2; } 
 	if(!is_numeric($ptms_scrolldelay)){ $ptms_scrolldelay = 5; } 
 	if(!is_numeric($ptms_noofpost)){ $ptms_noofpost = 10; }
 	
-	$sSql = query_posts('cat='.$ptms_categories.'&orderby='.$ptms_orderbys.'&order='.$ptms_order.'&showposts='.$ptms_noofpost);
-	
+	$sSql = query_posts('cat='.$ptms_categories.'&orderby='.$ptms_orderbys.'&order='.$ptms_order.'&showposts='.$ptms_noofpost.'&tag=destacado');
+
 	$spliter = "";
 	$ptms = "";
 	if ( ! empty($sSql) ) 
@@ -40,15 +43,24 @@ function ptmsshow()
 		$count = 0;
 		foreach ( $sSql as $sSql ) 
 		{
-			$title = stripslashes($sSql->post_title);
-			$link = get_permalink($sSql->ID);
-			if($count > 0)
-			{
-				$spliter = $ptms_spliter;
-			}
-			$ptms = $ptms . $spliter . "<a href='".$link."'>" . $title . "</a>";
-			
-			$count = $count + 1;
+			$fechaInicio       = get_post_meta($sSql->ID,'fecha_inicio',true);
+			$fechaInicio       = str_replace('/', '-', $fechaInicio);
+			$fechaInicio       = strtotime($fechaInicio);
+			$fechaFin          = get_post_meta($sSql->ID,'fecha_fin',true);
+			$fechaFin          = strtotime($fechaFin) ;
+
+			if( $fechaInicio == $hoyff ): 
+				$title = stripslashes($sSql->post_title);
+				$link = get_permalink($sSql->ID);
+				if($count > 0)
+				{
+					$spliter = $ptms_spliter;
+				}
+				$ptms = $ptms . $spliter . "<a href='".$link."'>" . $title . "</a>";
+				
+				$count = $count + 1;
+
+			endif;
 		}
 	}
 	wp_reset_query();
@@ -91,6 +103,9 @@ function ptms_shortcode( $atts )
 	$sSqlMin = $sSqlMin . "inner join ". $wpdb->prefix . "term_relationships wpr on wpr.term_taxonomy_id = ". $wpdb->prefix . "term_taxonomy.term_taxonomy_id ";
 	$sSqlMin = $sSqlMin . "inner join ". $wpdb->prefix . "posts p on p.ID = wpr.object_id ";
 	$sSqlMin = $sSqlMin . "where taxonomy= 'category' and p.post_type = 'post' and p.post_status = 'publish'";
+
+	echo $sSqlMin ;
+	die;
 	//$sSqlMin = $sSqlMin . "order by object_id; ";
 	
 	if( ! empty($ptms_categories) )

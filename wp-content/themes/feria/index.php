@@ -20,6 +20,9 @@ if ($blog_hero){
   <div id="content" class="clearfix row-fluid">
 
     <div id="main" class="span12 clearfix" role="main">
+      <div class="marquee-feria span12">
+         <?php if (function_exists (ptmsshow)) ptmsshow(); ?> 
+      </div>
 
       <div class="slider visible-desktop">
         <?php echo get_new_royalslider(1); ?>
