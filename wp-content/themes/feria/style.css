@@ -445,7 +445,8 @@ border-radius:8px;
 
 .marquee-feria{
 	z-index: 5;
-	background: #E0E1D4;;
+	background: #E0E1D4;
+	margin-bottom: 20px;
 }
 .marquee-feria a {
 	color: black;
