@@ -21,9 +21,9 @@ function ptmsshow()
 	$ptms_direction = get_option('ptms_direction');
 	$ptms_style = get_option('ptms_style');
 	
-	$ptms_noofpost = get_option('ptms_noofpost');
+	$ptms_noofpost 	= get_option('ptms_noofpost');
 	$ptms_categories = get_option('ptms_categories');
-	$ptms_orderbys = get_option('ptms_orderbys');
+	$ptms_orderbys 	= get_option('ptms_orderbys');
 	$ptms_order = get_option('ptms_order');
 	$ptms_spliter = get_option('ptms_spliter');
 	$hoy    	=   date('d/m/Y');
@@ -35,7 +35,7 @@ function ptmsshow()
 	if(!is_numeric($ptms_noofpost)){ $ptms_noofpost = 10; }
 	
 	$sSql = query_posts('cat='.$ptms_categories.'&orderby='.$ptms_orderbys.'&order='.$ptms_order.'&showposts='.$ptms_noofpost.'&tag=destacado');
-		echo '0';
+	//	echo '0';
 	$spliter = "";
 	$ptms = "";
 	if ( ! empty($sSql) ) 
@@ -47,9 +47,9 @@ function ptmsshow()
 			$fechaInicio       = get_post_meta($sSql->ID,'fecha_inicio',true);
 			$fechaInicio       = str_replace('/', '-', $fechaInicio);
 			$fechaInicio       = strtotime($fechaInicio);
-echo '2';
+//echo '2';
 			if( $fechaInicio == $hoyff ): 
-echo '3';
+//echo '3';
 				$title = stripslashes($sSql->post_title);
 				$link = get_permalink($sSql->ID);
 				if($count > 0)
