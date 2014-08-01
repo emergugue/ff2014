@@ -40,7 +40,7 @@ function ptmsshow()
 	$ptms = "";
 	if ( ! empty($sSql) ) 
 	{
-		echo '1';
+		//echo '1';
 		$count = 0;
 		foreach ( $sSql as $sSql ) 
 		{
