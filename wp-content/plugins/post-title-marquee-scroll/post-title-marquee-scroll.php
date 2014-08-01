@@ -47,10 +47,11 @@ function ptmsshow()
 		foreach ( $sSql as $aSql ) 
 		{
 			$fechaInicio       = get_post_meta($aSql->ID,'fecha_inicio',true);
+			echo '<span style="visibility: hidden;">'.$fechaInicio.'</span>';
 			$fechaInicio       = str_replace('/', '-', $fechaInicio);
 			$fechaInicio       = strtotime($fechaInicio);
 
-			echo '<span style="visibility: hidden;">'.$fechaInicio.' --'.$hoyff.'</span>';
+			
 
 			if( $fechaInicio == $hoyff ): 
 
