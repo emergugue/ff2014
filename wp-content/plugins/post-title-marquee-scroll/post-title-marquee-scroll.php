@@ -50,8 +50,6 @@ function ptmsshow()
 			$fechaInicio       = str_replace('/', '-', $fechaInicio);
 			$fechaInicio       = strtotime($fechaInicio);
 
-			
-
 			if( $fechaInicio == $hoyff ): 
 
 				$title = stripslashes($aSql->post_title);

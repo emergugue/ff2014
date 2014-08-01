@@ -43,9 +43,8 @@ function fetch_feed2( $url ) {
          return $feed;
  }
  
-
-  $feed = fetch_feed2('http://www.medellin.gov.co/irj/servlet/prt/portal/prtroot/pcd!3aportal_content!2fMunicipioMedellin!2fRssServerComponentMig?nodo=Feria%20de%20las%20Flores'); // el feed que queremos mostrar
-  //var_dump($feed) ;
+ $feed = fetch_feed('http://noticias.telemedellin.tv/tag/feriaflores/feed');
+  //$feed = fetch_feed2('http://www.medellin.gov.co/irj/servlet/prt/portal/prtroot/pcd!3aportal_content!2fMunicipioMedellin!2fRssServerComponentMig?nodo=Feria%20de%20las%20Flores'); // el feed que queremos mostrar
   if(count($feed->errors) > 0){
     $limit = 0;
   }
@@ -105,7 +104,8 @@ else foreach ($items as $item) : ?>
 <?php
 if(function_exists('fetch_feed')) {
   include_once(ABSPATH . WPINC . '/feed.php');               // hay que incluir esto
-  $feed = fetch_feed('http://noticias.telemedellin.tv/tag/feriaflores/feed'); // el feed que queremos mostrar
+  $feed = fetch_feed('http://www.medellin.gov.co/irj/servlet/prt/portal/prtroot/pcd!3aportal_content!2fMunicipioMedellin!2fRssServerComponentMig?nodo=Feria%20de%20las%20Flores'); // el feed que queremos mostrar
+  //$feed = fetch_feed('http://noticias.telemedellin.tv/tag/feriaflores/feed'); // el feed que queremos mostrar
   if(count($feed->errors) > 0){
     $limit = 0;
   }
@@ -113,6 +113,7 @@ if(function_exists('fetch_feed')) {
     $limit = $feed->get_item_quantity(3); // especificamos el número de items a mostrar
     $items = $feed->get_items(0, $limit); // se crea un array con los items
   }
+
 }
 if ($limit == 0) echo '';
 else foreach ($items as $item) : ?>
