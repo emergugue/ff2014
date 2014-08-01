@@ -675,6 +675,16 @@ span.hoy {
 	 background:#09F;
 	}
 
+/*Tablas de programacion TM*/
+table.programacion-tm td {
+	border: solid 1px;
+	padding: 6px;
+}
+table.programacion-tm thead th {
+	background: #C4C4C6;
+	border: solid 1px gray;
+}
+
 
 /*Widget programación del home*/
 #art-hoy header{
