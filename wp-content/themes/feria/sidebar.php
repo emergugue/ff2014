@@ -4,7 +4,7 @@
                     
          <?php if ( is_home() ) {?>
               <div class="oficial">
-                <p>Video oficial Feria de las Flores 2014</p>
+                <p><a target="_blank" href="https://www.youtube.com/watch?v=3bRaBQd9dww&list=UUAFLU70jPz4bODq_5BSWPIg">Video oficial Feria de las Flores 2014</a></p>
                 <iframe width="300" height="200" src="//www.youtube.com/embed/WXsOnprrdow?list=UUAFLU70jPz4bODq_5BSWPIg" frameborder="0" allowfullscreen></iframe>
               </div>
               <div class="viajero-feria">
