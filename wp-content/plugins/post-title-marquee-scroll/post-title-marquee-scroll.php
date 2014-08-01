@@ -40,15 +40,16 @@ function ptmsshow()
 	$ptms = "";
 	if ( ! empty($sSql) ) 
 	{
+		echo '1';
 		$count = 0;
 		foreach ( $sSql as $sSql ) 
 		{
 			$fechaInicio       = get_post_meta($sSql->ID,'fecha_inicio',true);
 			$fechaInicio       = str_replace('/', '-', $fechaInicio);
 			$fechaInicio       = strtotime($fechaInicio);
-
+echo '2';
 			if( $fechaInicio == $hoyff ): 
-				
+echo '3';
 				$title = stripslashes($sSql->post_title);
 				$link = get_permalink($sSql->ID);
 				if($count > 0)
