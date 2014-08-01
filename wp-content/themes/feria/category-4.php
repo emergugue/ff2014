@@ -100,11 +100,11 @@
   $fechaSeleccionada = strtotime($fechaSeleccionada);
   
   $myQuery = new WP_Query(array(
-       'cat' => 10,
-       'posts_per_page' => -1,
-       'tag'=>'destacado',
-       'orderby' => 'meta_value', 
-       'meta_key' => 'hora_inicio'
+     'cat' => 10,
+     'posts_per_page' => -1,
+     'orderby' => 'meta_value', 
+     'meta_key' => 'hora_inicio',
+     'tag'=>'destacado',
   ));
   // The Loop
   if ( $myQuery->have_posts() ):
