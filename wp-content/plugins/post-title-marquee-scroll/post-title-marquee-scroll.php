@@ -35,7 +35,7 @@ function ptmsshow()
 	if(!is_numeric($ptms_noofpost)){ $ptms_noofpost = 10; }
 	
 	$sSql = query_posts('cat='.$ptms_categories.'&orderby='.$ptms_orderbys.'&order='.$ptms_order.'&showposts='.$ptms_noofpost.'&tag=destacado');
-
+		echo '0';
 	$spliter = "";
 	$ptms = "";
 	if ( ! empty($sSql) ) 
