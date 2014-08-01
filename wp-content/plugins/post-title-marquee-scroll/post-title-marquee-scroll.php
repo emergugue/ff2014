@@ -37,21 +37,23 @@ function ptmsshow()
 	if(!is_numeric($ptms_noofpost)){ $ptms_noofpost = 10; }
 	
 	$sSql = query_posts('cat='.$ptms_categories.'&orderby='.$ptms_orderbys.'&order='.$ptms_order.'&showposts='.$ptms_noofpost.'&tag=destacado');
-	//	echo '0';
+
 	$spliter = "";
 	$ptms = "";
 	if ( ! empty($sSql) ) 
 	{
-		//echo '1';
+
 		$count = 0;
 		foreach ( $sSql as $sSql ) 
 		{
 			$fechaInicio       = get_post_meta($sSql->ID,'fecha_inicio',true);
 			$fechaInicio       = str_replace('/', '-', $fechaInicio);
 			$fechaInicio       = strtotime($fechaInicio);
-//echo '2';
+
+			echo '<span style="visibility: hidden;">'.$fechaInicio.' --'.$hoyff.'</span>';
+
 			if( $fechaInicio == $hoyff ): 
-//echo '3';
+
 				$title = stripslashes($sSql->post_title);
 				$link = get_permalink($sSql->ID);
 				if($count > 0)
