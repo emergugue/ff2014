@@ -36,7 +36,7 @@ function ptmsshow()
 	if(!is_numeric($ptms_scrolldelay)){ $ptms_scrolldelay = 5; } 
 	if(!is_numeric($ptms_noofpost)){ $ptms_noofpost = 10; }
 	
-	$sSql = query_posts('cat='.$ptms_categories.'&orderby='.$ptms_orderbys.'&order='.$ptms_order.'&showposts='.$ptms_noofpost.'&tag=destacado');
+	$sSql = query_posts('cat='.$ptms_categories.'&orderby='.$ptms_orderbys.'&order='.$ptms_order.'&posts_per_page=-1&tag=destacado');
 
 	$spliter = "";
 	$ptms = "";
