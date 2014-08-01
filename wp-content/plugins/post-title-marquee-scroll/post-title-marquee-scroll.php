@@ -14,6 +14,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 function ptmsshow()
 {
 	global $wpdb;
+	date_default_timezone_set('America/Bogota');
+	setlocale(LC_ALL, 'es_ES.UTF-8');
 	$ptms_marquee = "";
 	
 	$ptms_scrollamount = get_option('ptms_scrollamount');

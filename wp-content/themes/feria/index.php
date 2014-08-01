@@ -21,7 +21,7 @@ if ($blog_hero){
 
     <div id="main" class="inicio span12 clearfix" role="main">
       <div class="marquee-feria span12">
-         <?php if (function_exists (ptmsshow)) ptmsshow(); ?> 
+         <?php if (function_exists ('ptmsshow')) ptmsshow(); ?> 
       </div>
 
       <div class="slider visible-desktop">
