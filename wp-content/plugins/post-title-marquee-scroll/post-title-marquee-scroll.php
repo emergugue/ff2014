@@ -36,7 +36,7 @@ function ptmsshow()
 	if(!is_numeric($ptms_scrolldelay)){ $ptms_scrolldelay = 5; } 
 	if(!is_numeric($ptms_noofpost)){ $ptms_noofpost = 10; }
 	
-	$sSql = query_posts('cat=10&tag=destacado');
+	$sSql = query_posts('cat='.$ptms_categories.'&orderby='.$ptms_orderbys.'&order='.$ptms_order.'&showposts='.$ptms_noofpost.'&tag=destacado');
 
 	$spliter = "";
 	$ptms = "";
@@ -44,9 +44,9 @@ function ptmsshow()
 	{
 
 		$count = 0;
-		foreach ( $sSql as $sSql ) 
+		foreach ( $sSql as $aSql ) 
 		{
-			$fechaInicio       = get_post_meta($sSql->ID,'fecha_inicio',true);
+			$fechaInicio       = get_post_meta($aSql->ID,'fecha_inicio',true);
 			$fechaInicio       = str_replace('/', '-', $fechaInicio);
 			$fechaInicio       = strtotime($fechaInicio);
 
@@ -54,8 +54,8 @@ function ptmsshow()
 
 			if( $fechaInicio == $hoyff ): 
 
-				$title = stripslashes($sSql->post_title);
-				$link = get_permalink($sSql->ID);
+				$title = stripslashes($aSql->post_title);
+				$link = get_permalink($aSql->ID);
 				if($count > 0)
 				{
 					$spliter = $ptms_spliter;
