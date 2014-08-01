@@ -110,10 +110,10 @@
   if ( $myQuery->have_posts() ):
   while ( $myQuery->have_posts() ) : $myQuery->the_post();
 
-    $fechaInicio       = str_replace('/', '-', get_post_meta($post->ID,'fecha_inicio',true));
-    $fechaInicio       = strtotime($fechaInicio);
-    $fechaFin         = str_replace('/', '-', get_post_meta($post->ID,'fecha_fin',true));
-    $fechaFin         = strtotime($fechaFin);
+    $fechaInicio        = str_replace('/', '-', get_post_meta($post->ID,'fecha_inicio',true));
+    $fechaInicio        = strtotime($fechaInicio);
+    $fechaFin           = str_replace('/', '-', get_post_meta($post->ID,'fecha_fin',true));
+    $fecha_fin           = strtotime($fechaFin);
 
     $horaInicio = get_post_meta($post->ID,'hora_inicio',true);
     $horaFin    = get_post_meta($post->ID,'hora_fin',true);

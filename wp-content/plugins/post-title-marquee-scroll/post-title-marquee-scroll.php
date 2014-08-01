@@ -46,10 +46,9 @@ function ptmsshow()
 			$fechaInicio       = get_post_meta($sSql->ID,'fecha_inicio',true);
 			$fechaInicio       = str_replace('/', '-', $fechaInicio);
 			$fechaInicio       = strtotime($fechaInicio);
-			$fechaFin          = get_post_meta($sSql->ID,'fecha_fin',true);
-			$fechaFin          = strtotime($fechaFin) ;
 
 			if( $fechaInicio == $hoyff ): 
+				
 				$title = stripslashes($sSql->post_title);
 				$link = get_permalink($sSql->ID);
 				if($count > 0)
