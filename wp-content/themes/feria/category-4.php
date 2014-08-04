@@ -38,16 +38,22 @@
     </div>
     <div class="descargarProgramacion row-fluid"> 
       <div class="low span6">
-        <a id="programacion-baja" href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf" class="btn" target="_blank">
-        <?php if(qtrans_getLanguage() == 'es'): ?>Programación en PDF (Calidad baja)
-        <?php else: ?>Download PDF schedule here (Low quality)
+        <?php if(qtrans_getLanguage() == 'es'): ?>
+         <a id="programacion-baja" href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf" class="btn" target="_blank">
+         Programación en PDF (Calidad baja)
+        <?php else: ?>
+         <a id="programacion-baja" href="<?php bloginfo('template_directory'); ?>/descargables/Programacion_eng.pdf" class="btn" target="_blank">
+         Download PDF schedule here (Low quality)
         <?php endif; ?>
         </a>
       </div>
-      <div class="hd span6">
+      <div class="hd span6"> 
+        <?php if(qtrans_getLanguage() == 'es'): ?>
         <a id="programacion-alta" href="<?php bloginfo('template_directory'); ?>/descargables/Programacion_hd.pdf" class="btn" target="_blank">
-        <?php if(qtrans_getLanguage() == 'es'): ?>Programación en PDF (Calidad alta)
-        <?php else: ?>Download PDF schedule here ( Full HD )
+         Programación en PDF (Calidad alta)
+        <?php else: ?>
+        <a id="programacion-alta" href="<?php bloginfo('template_directory'); ?>/descargables/Programacion_eng_hd.pdf" class="btn" target="_blank">
+        Download PDF schedule here ( Full HD )
         <?php endif; ?>
         </a>
       </div>
@@ -113,7 +119,7 @@
     $fechaInicio        = str_replace('/', '-', get_post_meta($post->ID,'fecha_inicio',true));
     $fechaInicio        = strtotime($fechaInicio);
     $fechaFin           = str_replace('/', '-', get_post_meta($post->ID,'fecha_fin',true));
-    $fecha_fin           = strtotime($fechaFin);
+    $fecha_fin          = strtotime($fechaFin);
 
     $horaInicio = get_post_meta($post->ID,'hora_inicio',true);
     $horaFin    = get_post_meta($post->ID,'hora_fin',true);
