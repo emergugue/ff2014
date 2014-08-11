@@ -2,9 +2,6 @@
 define('WP_USE_THEMES', false);
 require_once('../../../wp-load.php');
 
-
-
-
 if(function_exists('fetch_feed')) {
 
   include_once(ABSPATH . WPINC . '/feed.php');               // hay que incluir esto
@@ -43,7 +40,7 @@ function fetch_feed2( $url ) {
          return $feed;
  }
  
- $feed = fetch_feed('http://noticias.telemedellin.tv/tag/feriaflores/feed');
+ $feed  = fetch_feed('http://noticias.telemedellin.tv/tag/feriaflores/feed');
  $feed2 = fetch_feed('http://www.medellin.gov.co/irj/servlet/prt/portal/prtroot/pcd!3aportal_content!2fMunicipioMedellin!2fRssServerComponentMig?nodo=Feria%20de%20las%20Flores'); // el feed que queremos mostrar
 
 

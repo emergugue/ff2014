@@ -7,11 +7,11 @@
                 <p><a target="_blank" href="https://www.youtube.com/watch?v=3bRaBQd9dww&list=UUAFLU70jPz4bODq_5BSWPIg">Video oficial Feria de las Flores 2014</a></p>
                 <iframe width="300" height="200" src="//www.youtube.com/embed/WXsOnprrdow?list=UUAFLU70jPz4bODq_5BSWPIg" frameborder="0" allowfullscreen></iframe>
               </div>
-              <div class="viajero-feria">
+          <!--    <div class="viajero-feria">
                 <a href="<?php echo home_url(); ?>/viajero-de-las-flores/">
                   <img src="<?php echo home_url(); ?>/wp-content/themes/feria/images/banner-viajero.jpg" alt="Conoce al viajero de las flores" class="viajero-banner">
                 </a>
-              </div>
+               </div> -->
               <div class="videoFeria">
                <a id="descarga-cancion" target="_blank"  href="http://bit.ly/1wVLebc" alt="Descargar">
                   <img src="<?php echo home_url(); ?>/wp-content/themes/feria/images/descarga-flores.jpg" >
